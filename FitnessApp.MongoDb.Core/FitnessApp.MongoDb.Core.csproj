@@ -1,15 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <CodeAnalysisRuleSet>..\..\MongoDB.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <AssemblyTitle>MongoDB.Driver.Core</AssemblyTitle>
-    <Product>MongoDB.Driver.Core</Product>
-    <PackageId>MongoDB.Driver.Core</PackageId>
-    <Description>Official MongoDB supported Driver Core library. See https://www.mongodb.com/docs/drivers/csharp/ for more details.</Description>
-    <PackageDescription>Core Component of the Official MongoDB .NET Driver.</PackageDescription>
+    <AssemblyTitle>FitnessApp.MongoDb.Core</AssemblyTitle>
+    <Product>FitnessApp.MongoDb.Core</Product>
+    <PackageId>FitnessApp.MongoDb.Core</PackageId>
+    <Description>Official MongoDb supported Core library.</Description>
+    <PackageDescription>Core Component of the Official MongoDb .NET Driver.</PackageDescription>
     <IsPackable>true</IsPackable>
   </PropertyGroup>
 
@@ -24,7 +21,7 @@
   <ItemGroup>
     <PackageReference Include="AWSSDK.SecurityToken" Version="3.7.300.39" />
     <PackageReference Include="DnsClient" Version="1.7.0" />
-    <PackageReference Include="FitnessApp.MongoDd.Bson" Version="1.0.0" />
+    <PackageReference Include="FitnessApp.MongoDb.Bson" Version="1.0.0" />
     <PackageReference Include="MongoDB.Libmongocrypt" Version="1.8.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
     <PackageReference Include="SharpCompress" Version="0.36.0" />

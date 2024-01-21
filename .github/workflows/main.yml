@@ -42,6 +42,9 @@ jobs:
       with:
         dotnet-version: 8.0.x
         
+    - name: Prepare package
+      run: dotnet nuget add source --username voldovgan2 --password ${{ secrets.NUGET_PACKAGE_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/voldovgan2/index.json"
+    
     - name: Restore dependencies
       run: dotnet restore
       
