@@ -19,7 +19,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Authentication.Libgssapi
 {
-    internal sealed class GssapiSecurityCredential : GssapiSafeHandle
+    public sealed class GssapiSecurityCredential : GssapiSafeHandle
     {
         public static GssapiSecurityCredential Acquire(string username, SecureString password)
         {

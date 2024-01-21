@@ -21,7 +21,7 @@ namespace MongoDB.Driver.Core.Servers
     /// Monitors a server for state changes.
     /// </summary>
     /// <seealso cref="System.IDisposable" />
-    internal interface IServerMonitor : IDisposable
+    public interface IServerMonitor : IDisposable
     {
         /// <summary>
         /// The monitor's view of the server, which could be considered stale relative to the <see cref="Server"/>'s view.

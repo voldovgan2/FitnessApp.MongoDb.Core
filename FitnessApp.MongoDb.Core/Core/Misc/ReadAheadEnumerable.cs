@@ -22,7 +22,7 @@ using System.Threading.Tasks;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal class ReadAheadEnumerable<T> : IEnumerable<T>
+    public class ReadAheadEnumerable<T> : IEnumerable<T>
     {
         private readonly IEnumerable<T> _wrapped;
 
@@ -41,7 +41,7 @@ namespace MongoDB.Driver.Core.Misc
             return GetEnumerator();
         }
 
-        internal class ReadAheadEnumerator : IEnumerator<T>
+        public class ReadAheadEnumerator : IEnumerator<T>
         {
             private readonly IEnumerator<T> _wrapped;
             private bool _hasNext;

@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal sealed class SemaphoreSlimSignalable : IDisposable
+    public sealed class SemaphoreSlimSignalable : IDisposable
     {
         public enum SemaphoreWaitResult
         {

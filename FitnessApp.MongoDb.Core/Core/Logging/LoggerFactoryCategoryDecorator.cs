@@ -19,7 +19,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Logging
 {
-    internal sealed class LoggerFactoryCategoryDecorator : ILoggerFactory
+    public sealed class LoggerFactoryCategoryDecorator : ILoggerFactory
     {
         private readonly ILoggerFactory _loggerFactory;
         private readonly LoggingSettings _loggingSettings;

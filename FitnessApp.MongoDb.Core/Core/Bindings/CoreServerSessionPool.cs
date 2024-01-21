@@ -20,7 +20,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver
 {
-    internal class CoreServerSessionPool : ICoreServerSessionPool
+    public class CoreServerSessionPool : ICoreServerSessionPool
     {
         // private fields
         private readonly ICluster _cluster;
@@ -119,7 +119,7 @@ namespace MongoDB.Driver
         }
 
         // nested types
-        internal sealed class ReleaseOnDisposeCoreServerSession : WrappingCoreServerSession
+        public sealed class ReleaseOnDisposeCoreServerSession : WrappingCoreServerSession
         {
             // private fields
             private readonly ICoreServerSessionPool _pool;

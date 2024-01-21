@@ -30,7 +30,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Servers
 {
-    internal class DefaultServer : Server
+    public class DefaultServer : Server
     {
         #region static
         // static fields

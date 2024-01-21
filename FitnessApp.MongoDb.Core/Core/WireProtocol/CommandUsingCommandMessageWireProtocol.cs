@@ -33,7 +33,7 @@ using MongoDB.Driver.Core.WireProtocol.Messages.Encoders;
 
 namespace MongoDB.Driver.Core.WireProtocol
 {
-    internal class CommandUsingCommandMessageWireProtocol<TCommandResult> : IWireProtocol<TCommandResult>
+    public class CommandUsingCommandMessageWireProtocol<TCommandResult> : IWireProtocol<TCommandResult>
     {
         // private fields
         private readonly BsonDocument _additionalOptions; // TODO: can these be supported when using CommandMessage?

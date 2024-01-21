@@ -19,7 +19,7 @@ using MongoDB.Driver.Core.Events;
 
 namespace MongoDB.Driver.Core.Logging
 {
-    internal sealed class EventLogger<T> where T : LogCategories.EventCategory
+    public sealed class EventLogger<T> where T : LogCategories.EventCategory
     {
         private readonly EventPublisher _eventPublisher;
         private readonly ILogger<T> _logger;

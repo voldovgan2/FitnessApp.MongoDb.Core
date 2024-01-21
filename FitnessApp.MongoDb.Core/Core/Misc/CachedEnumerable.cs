@@ -19,7 +19,7 @@ using System.Linq;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal class CachedEnumerable<T> : IEnumerable<T>
+    public class CachedEnumerable<T> : IEnumerable<T>
     {
         private readonly IEnumerable<T> _enumerable;
         private IReadOnlyList<T> _cached;

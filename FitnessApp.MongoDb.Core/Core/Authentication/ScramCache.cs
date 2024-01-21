@@ -24,7 +24,7 @@ namespace MongoDB.Driver.Core.Authentication
     /// <summary>
     /// A cache for Client and Server keys, to be used during authentication.
     /// </summary>
-    internal class ScramCache
+    public class ScramCache
     {
         private ScramCacheKey _cacheKey;
         private ScramCacheEntry _cachedEntry;
@@ -61,13 +61,13 @@ namespace MongoDB.Driver.Core.Authentication
         }
     }
 
-    internal class ScramCacheKey
+    public class ScramCacheKey
     {
         private int _iterationCount;
         private SecureString _password;
         private byte[] _salt;
 
-        internal ScramCacheKey(SecureString password, byte[] salt, int iterationCount)
+        public ScramCacheKey(SecureString password, byte[] salt, int iterationCount)
         {
             _iterationCount = iterationCount;
             _password = password;
@@ -145,7 +145,7 @@ namespace MongoDB.Driver.Core.Authentication
 
     }
 
-    internal class ScramCacheEntry
+    public class ScramCacheEntry
     {
         private byte[] _clientKey;
         private byte[] _serverKey;

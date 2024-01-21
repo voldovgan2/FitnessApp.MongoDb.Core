@@ -23,7 +23,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Authentication.External
 {
-    internal sealed class AwsCredentials : IExternalCredentials
+    public sealed class AwsCredentials : IExternalCredentials
     {
         private readonly string _accessKeyId;
         private readonly SecureString _secretAccessKey;
@@ -60,7 +60,7 @@ namespace MongoDB.Driver.Core.Authentication.External
             };
     }
 
-    internal class AwsAuthenticationCredentialsProvider : IExternalAuthenticationCredentialsProvider<AwsCredentials>, ICredentialsCache<AwsCredentials>
+    public class AwsAuthenticationCredentialsProvider : IExternalAuthenticationCredentialsProvider<AwsCredentials>, ICredentialsCache<AwsCredentials>
     {
         private readonly object _lock = new object();
 

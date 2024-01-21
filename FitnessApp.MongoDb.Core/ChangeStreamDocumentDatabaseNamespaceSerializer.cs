@@ -20,7 +20,7 @@ using MongoDB.Bson.Serialization.Serializers;
 
 namespace MongoDB.Driver
 {
-    internal class ChangeStreamDocumentDatabaseNamespaceSerializer : SealedClassSerializerBase<DatabaseNamespace>, IBsonDocumentSerializer
+    public class ChangeStreamDocumentDatabaseNamespaceSerializer : SealedClassSerializerBase<DatabaseNamespace>, IBsonDocumentSerializer
     {
         #region static
         // private static fields

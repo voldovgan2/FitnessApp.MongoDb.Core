@@ -17,7 +17,7 @@ using System.Security.Cryptography;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal class DefaultRandomByteGenerator : IRandomByteGenerator
+    public class DefaultRandomByteGenerator : IRandomByteGenerator
     {
         public byte[] Generate(int length)
         {

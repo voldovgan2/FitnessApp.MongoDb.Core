@@ -19,7 +19,7 @@ using MongoDB.Bson;
 
 namespace MongoDB.Driver.Core.ConnectionPools
 {
-    internal class ServiceStates
+    public class ServiceStates
     {
         private readonly Dictionary<ObjectId, ServiceState> _serviceStates = new();
         private object _lock = new object();

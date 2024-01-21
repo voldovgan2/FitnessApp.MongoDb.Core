@@ -22,7 +22,7 @@ namespace MongoDB.Driver.Core.Clusters
     /// A cluster clock.
     /// </summary>
     /// <seealso cref="MongoDB.Driver.Core.Clusters.IClusterClock" />
-    internal class ClusterClock : IClusterClock
+    public class ClusterClock : IClusterClock
     {
         #region static
         // public static methods
@@ -71,7 +71,7 @@ namespace MongoDB.Driver.Core.Clusters
     /// An object that represents no cluster clock.
     /// </summary>
     /// <seealso cref="MongoDB.Driver.Core.Clusters.IClusterClock" />
-    internal sealed class NoClusterClock : IClusterClock
+    public sealed class NoClusterClock : IClusterClock
     {
         /// <inheritdoc />
         public BsonDocument ClusterTime => null;

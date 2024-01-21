@@ -30,7 +30,7 @@ namespace MongoDB.Driver.Core.Clusters
     /// <summary>
     /// Represents a multi server cluster.
     /// </summary>
-    internal sealed class MultiServerCluster : Cluster, IDnsMonitoringCluster
+    public sealed class MultiServerCluster : Cluster, IDnsMonitoringCluster
     {
         // fields
         private readonly IDnsMonitorFactory _dnsMonitorFactory;

@@ -22,7 +22,7 @@ namespace MongoDB.Driver
     /// A server session.
     /// </summary>
     /// <seealso cref="MongoDB.Driver.ICoreServerSession" />
-    internal sealed class CoreServerSession : ICoreServerSession
+    public sealed class CoreServerSession : ICoreServerSession
     {
         #region static
         // private static methods

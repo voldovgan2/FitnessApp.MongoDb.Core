@@ -21,7 +21,7 @@ using System.Threading.Tasks;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal class SrvRecord
+    public class SrvRecord
     {
         public SrvRecord(DnsEndPoint endPoint, TimeSpan timeToLive)
         {
@@ -33,7 +33,7 @@ namespace MongoDB.Driver.Core.Misc
         public TimeSpan TimeToLive { get; }
     }
 
-    internal class TxtRecord
+    public class TxtRecord
     {
         public TxtRecord(List<string> strings)
         {
@@ -43,7 +43,7 @@ namespace MongoDB.Driver.Core.Misc
         public List<string> Strings { get; }
     }
 
-    internal interface IDnsResolver
+    public interface IDnsResolver
     {
         List<SrvRecord> ResolveSrvRecords(string service, CancellationToken cancellation);
         Task<List<SrvRecord>> ResolveSrvRecordsAsync(string service, CancellationToken cancellation);

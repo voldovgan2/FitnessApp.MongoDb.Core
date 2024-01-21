@@ -18,7 +18,7 @@ namespace MongoDB.Driver.Core.Authentication.Sspi
     /// <summary>
     /// This is represented as a string in AcquireCredentialsHandle. This value will have .ToString() called on it.
     /// </summary>
-    internal enum SspiPackage
+    public enum SspiPackage
     {
         /// <summary>
         /// Kerberos

@@ -14,9 +14,6 @@
 */
 
 using System;
-#if NET472
-using System.Runtime.ConstrainedExecution;
-#endif
 using System.Runtime.InteropServices;
 
 namespace MongoDB.Driver.Core.Authentication.Sspi

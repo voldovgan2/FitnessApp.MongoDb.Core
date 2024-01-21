@@ -18,7 +18,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Compression
 {
-    internal class NoopCompressor : ICompressor
+    public class NoopCompressor : ICompressor
     {
         public CompressorType Type => CompressorType.Noop;
 

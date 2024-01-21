@@ -19,7 +19,7 @@ using System.Text.RegularExpressions;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal class ServerVersion : IEquatable<ServerVersion>, IComparable<ServerVersion>
+    public class ServerVersion : IEquatable<ServerVersion>, IComparable<ServerVersion>
     {
         #region static
         private static void LookForPreReleaseNumericSuffix(string preRelease, out string preReleasePrefix, out int? preReleaseNumericSuffix)

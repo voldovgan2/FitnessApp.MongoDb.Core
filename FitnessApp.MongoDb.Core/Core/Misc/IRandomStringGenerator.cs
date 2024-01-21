@@ -15,7 +15,7 @@
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal interface IRandomStringGenerator
+    public interface IRandomStringGenerator
     {
         string Generate(int length, string legalCharacters);
     }

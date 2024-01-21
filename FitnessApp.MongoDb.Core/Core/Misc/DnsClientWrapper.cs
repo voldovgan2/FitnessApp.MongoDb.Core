@@ -23,7 +23,7 @@ using DnsClient;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal class DnsClientWrapper : IDnsResolver
+    public class DnsClientWrapper : IDnsResolver
     {
         #region static
         private static IDnsResolver __instance = new DnsClientWrapper();

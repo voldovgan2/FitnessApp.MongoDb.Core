@@ -19,7 +19,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver
 {
-    internal abstract class WrappingCoreServerSession : ICoreServerSession
+    public abstract class WrappingCoreServerSession : ICoreServerSession
     {
         // private fields
         protected bool _disposed;

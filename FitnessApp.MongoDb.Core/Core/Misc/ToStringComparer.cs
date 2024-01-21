@@ -17,7 +17,7 @@ using System.Collections.Generic;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal class ToStringComparer<T> : IComparer<T>
+    public class ToStringComparer<T> : IComparer<T>
     {
         public int Compare(T x, T y)
         {

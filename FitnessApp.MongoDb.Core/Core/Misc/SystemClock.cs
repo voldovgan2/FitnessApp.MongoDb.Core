@@ -17,7 +17,7 @@ using System;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal class SystemClock : IClock
+    public class SystemClock : IClock
     {
         // public static fields
         public static readonly SystemClock Instance = new SystemClock();

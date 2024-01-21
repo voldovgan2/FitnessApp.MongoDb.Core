@@ -68,7 +68,7 @@ namespace MongoDB.Driver
         BsonDocument GetResumeToken();
     }
 
-    internal interface ICursorBatchInfo
+    public interface ICursorBatchInfo
     {
         /// <summary>
         /// Gets the post batch resume token.

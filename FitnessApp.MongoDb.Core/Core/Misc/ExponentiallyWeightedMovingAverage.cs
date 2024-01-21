@@ -18,7 +18,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal class ExponentiallyWeightedMovingAverage
+    public class ExponentiallyWeightedMovingAverage
     {
         // fields
         private readonly double _alpha;

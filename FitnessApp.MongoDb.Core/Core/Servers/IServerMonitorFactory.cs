@@ -20,7 +20,7 @@ namespace MongoDB.Driver.Core.Servers
     /// <summary>
     /// Represents a server monitor factory.
     /// </summary>
-    internal interface IServerMonitorFactory
+    public interface IServerMonitorFactory
     {
         /// <summary>
         /// Creates a server monitor.

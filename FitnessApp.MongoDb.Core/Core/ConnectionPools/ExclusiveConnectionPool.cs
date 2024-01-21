@@ -27,7 +27,7 @@ using MongoDB.Driver.Core.Servers;
 
 namespace MongoDB.Driver.Core.ConnectionPools
 {
-    internal sealed partial class ExclusiveConnectionPool : IConnectionPool
+    public sealed partial class ExclusiveConnectionPool : IConnectionPool
     {
         // fields
         private readonly CheckOutReasonCounter _checkOutReasonCounter;

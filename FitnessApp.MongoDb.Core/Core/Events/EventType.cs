@@ -15,7 +15,7 @@
 
 namespace MongoDB.Driver.Core.Events
 {
-    internal enum EventType
+    public enum EventType
     {
         ClusterAddedServer = 0,
         ClusterAddingServer,

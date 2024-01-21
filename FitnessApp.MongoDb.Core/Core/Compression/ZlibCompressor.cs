@@ -25,7 +25,7 @@ namespace MongoDB.Driver.Core.Compression
     /// <summary>
     /// Compressor according to the zlib algorithm.
     /// </summary> 
-    internal sealed class ZlibCompressor : ICompressor
+    public sealed class ZlibCompressor : ICompressor
     {
         private readonly CompressionLevel _compressionLevel;
 

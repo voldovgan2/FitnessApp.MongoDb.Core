@@ -18,7 +18,7 @@ using MongoDB.Bson;
 
 namespace MongoDB.Driver.Core.WireProtocol.Messages
 {
-    internal sealed class CommandMessageDisposer : IDisposable
+    public sealed class CommandMessageDisposer : IDisposable
     {
         // private fields
         private CommandMessage _message;

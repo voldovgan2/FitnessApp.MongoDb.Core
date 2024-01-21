@@ -18,7 +18,7 @@ using MongoDB.Bson;
 
 namespace MongoDB.Driver.Core.Bindings
 {
-    internal class NoCoreServerSession : ICoreServerSession
+    public class NoCoreServerSession : ICoreServerSession
     {
         #region static
         // private static fields

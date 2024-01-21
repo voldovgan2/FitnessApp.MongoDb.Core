@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace MongoDB.Driver.Core.Authentication.External
 {
-    internal interface IExternalAuthenticationCredentialsProvider<TCredentials> where TCredentials : IExternalCredentials
+    public interface IExternalAuthenticationCredentialsProvider<TCredentials> where TCredentials : IExternalCredentials
     {
         TCredentials CreateCredentialsFromExternalSource(CancellationToken cancellationToken = default);
         Task<TCredentials> CreateCredentialsFromExternalSourceAsync(CancellationToken cancellationToken = default);

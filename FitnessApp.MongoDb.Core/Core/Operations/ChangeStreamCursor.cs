@@ -30,7 +30,7 @@ namespace MongoDB.Driver.Core.Operations
     /// </summary>
     /// <typeparam name="TDocument">The type of the output documents.</typeparam>
     /// <seealso cref="MongoDB.Driver.IAsyncCursor{TOutput}" />
-    internal sealed class ChangeStreamCursor<TDocument> : IChangeStreamCursor<TDocument>
+    public sealed class ChangeStreamCursor<TDocument> : IChangeStreamCursor<TDocument>
     {
         // private fields
         private readonly IReadBinding _binding;

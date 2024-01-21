@@ -18,7 +18,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Authentication.External
 {
-    internal sealed class ExternalCredentialsAuthenticators
+    public sealed class ExternalCredentialsAuthenticators
     {
         #region static
         private static Lazy<ExternalCredentialsAuthenticators> __instance = new Lazy<ExternalCredentialsAuthenticators>(() => new ExternalCredentialsAuthenticators(), isThreadSafe: true);

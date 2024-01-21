@@ -29,7 +29,7 @@ using MongoDB.Driver.Core.WireProtocol.Messages.Encoders;
 
 namespace MongoDB.Driver.Core.WireProtocol
 {
-    internal class CommandWireProtocol<TCommandResult> : IWireProtocol<TCommandResult>
+    public class CommandWireProtocol<TCommandResult> : IWireProtocol<TCommandResult>
     {
         // private fields
         private readonly BsonDocument _additionalOptions;

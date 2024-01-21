@@ -17,12 +17,12 @@ using System;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal interface IEnvironmentVariableProvider
+    public interface IEnvironmentVariableProvider
     {
         string GetEnvironmentVariable(string name);
     }
 
-    internal class EnvironmentVariableProvider : IEnvironmentVariableProvider
+    public class EnvironmentVariableProvider : IEnvironmentVariableProvider
     {
         private static readonly IEnvironmentVariableProvider __instance = new EnvironmentVariableProvider();
         public static IEnvironmentVariableProvider Instance => __instance;

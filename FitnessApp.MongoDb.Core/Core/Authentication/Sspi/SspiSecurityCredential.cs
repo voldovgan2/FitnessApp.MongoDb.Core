@@ -23,10 +23,10 @@ namespace MongoDB.Driver.Core.Authentication.Sspi
     /// <summary>
     /// A wrapper around the SspiHandle structure specifically used as a credential handle.
     /// </summary>
-    internal class SspiSecurityCredential : SafeHandle
+    public class SspiSecurityCredential : SafeHandle
     {
         // fields
-        internal SspiHandle _sspiHandle;
+        public SspiHandle _sspiHandle;
 
         // constructors
         public SspiSecurityCredential()

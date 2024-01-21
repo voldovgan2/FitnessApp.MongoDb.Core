@@ -20,7 +20,7 @@ using MongoDB.Bson.Serialization.Serializers;
 
 namespace MongoDB.Driver
 {
-    internal class ChangeStreamSplitEventSerializer : SealedClassSerializerBase<ChangeStreamSplitEvent>
+    public class ChangeStreamSplitEventSerializer : SealedClassSerializerBase<ChangeStreamSplitEvent>
     {
         #region static
 

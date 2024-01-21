@@ -21,7 +21,7 @@ using MongoDB.Driver.Core.WireProtocol.Messages.Encoders;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal class BulkInsertOperation : BulkUnmixedWriteOperationBase<InsertRequest>
+    public class BulkInsertOperation : BulkUnmixedWriteOperationBase<InsertRequest>
     {
         // constructors
         public BulkInsertOperation(

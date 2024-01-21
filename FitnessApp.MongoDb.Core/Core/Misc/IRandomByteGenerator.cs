@@ -15,7 +15,7 @@
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal interface IRandomByteGenerator
+    public interface IRandomByteGenerator
     {
         byte[] Generate(int length);
     }

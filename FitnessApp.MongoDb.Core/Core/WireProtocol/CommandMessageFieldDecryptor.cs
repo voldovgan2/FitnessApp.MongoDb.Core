@@ -23,7 +23,7 @@ using MongoDB.Driver.Core.WireProtocol.Messages.Encoders;
 
 namespace MongoDB.Driver.Core.WireProtocol
 {
-    internal class CommandMessageFieldDecryptor
+    public class CommandMessageFieldDecryptor
     {
         // private fields
         private readonly IBinaryDocumentFieldDecryptor _documentFieldDecryptor;

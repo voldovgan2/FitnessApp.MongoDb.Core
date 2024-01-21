@@ -21,7 +21,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Clusters
 {
-    internal class DnsMonitorFactory : IDnsMonitorFactory
+    public class DnsMonitorFactory : IDnsMonitorFactory
     {
         private readonly IEventSubscriber _eventSubscriber;
         private readonly ILoggerFactory _loggerFactory;

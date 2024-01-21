@@ -263,7 +263,7 @@ namespace MongoDB.Driver.Core.Logging
         private static string TruncateIfNeeded(string str, int length) =>
              str.Length > length ? str.Substring(0, length) + "..." : str;
 
-        internal sealed class LogTemplateProvider
+        public sealed class LogTemplateProvider
         {
             public LogLevel LogLevel { get; }
             public string[] Templates { get; }

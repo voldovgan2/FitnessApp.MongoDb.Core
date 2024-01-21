@@ -18,7 +18,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Events
 {
-    internal sealed class EventPublisher
+    public sealed class EventPublisher
     {
         private static readonly Delegate __eventHandlerNull = new Action(() => { });
         private static readonly int __eventTypesCount = Enum.GetValues(typeof(EventType)).Length;

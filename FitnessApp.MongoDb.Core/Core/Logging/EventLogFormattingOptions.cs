@@ -17,7 +17,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Logging
 {
-    internal sealed class EventLogFormattingOptions
+    public sealed class EventLogFormattingOptions
     {
         public int MaxDocumentSize { get; }
 

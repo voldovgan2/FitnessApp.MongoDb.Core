@@ -20,7 +20,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Compression
 {
-    internal class SnappyCompressor : ICompressor
+    public class SnappyCompressor : ICompressor
     {
         public CompressorType Type => CompressorType.Snappy;
 

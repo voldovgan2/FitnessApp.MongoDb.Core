@@ -19,7 +19,7 @@ using MongoDB.Bson.Serialization.Serializers;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal class DelayedEvaluationWriteConcernSerializer : SealedClassSerializerBase<Func<WriteConcern>>
+    public class DelayedEvaluationWriteConcernSerializer : SealedClassSerializerBase<Func<WriteConcern>>
     {
         // private fields
         protected override void SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, Func<WriteConcern> value)

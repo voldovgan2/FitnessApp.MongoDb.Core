@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 namespace MongoDB.Driver.Core.Authentication.Libgssapi
 {
     [StructLayout(LayoutKind.Sequential)]
-    internal class GssOutputBuffer : IDisposable
+    public class GssOutputBuffer : IDisposable
     {
         // These fields are only modified by unmanaged libgssapi functions.
         private readonly nuint _length = 0;

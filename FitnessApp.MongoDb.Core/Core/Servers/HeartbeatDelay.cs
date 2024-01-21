@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 
 namespace MongoDB.Driver.Core.Servers
 {
-    internal sealed class HeartbeatDelay : IDisposable
+    public sealed class HeartbeatDelay : IDisposable
     {
         // fields
         private readonly DateTime _earlyHeartbeatAt;

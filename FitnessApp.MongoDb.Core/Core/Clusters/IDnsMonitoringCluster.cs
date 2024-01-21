@@ -22,7 +22,7 @@ namespace MongoDB.Driver.Core.Clusters
     /// <summary>
     /// An interface implemented by an ICluster that starts a DnsMonitor on a separate thread and handles the resulting calls to ProcessDnsResults.
     /// </summary>
-    internal interface IDnsMonitoringCluster
+    public interface IDnsMonitoringCluster
     {
         void ProcessDnsException(Exception exception);
         void ProcessDnsResults(List<DnsEndPoint> endPoints);

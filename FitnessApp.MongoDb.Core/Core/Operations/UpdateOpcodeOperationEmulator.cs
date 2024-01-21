@@ -23,7 +23,7 @@ using MongoDB.Driver.Core.WireProtocol.Messages.Encoders;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal class UpdateOpcodeOperationEmulator : IExecutableInRetryableWriteContext<WriteConcernResult>
+    public class UpdateOpcodeOperationEmulator : IExecutableInRetryableWriteContext<WriteConcernResult>
     {
         // fields
         private bool? _bypassDocumentValidation;

@@ -30,7 +30,7 @@ namespace MongoDB.Driver.Core.Connections
     /// <summary>
     /// Represents a connection initializer (opens and authenticates connections).
     /// </summary>
-    internal class ConnectionInitializer : IConnectionInitializer
+    public class ConnectionInitializer : IConnectionInitializer
     {
         private readonly BsonDocument _clientDocument;
         private readonly IReadOnlyList<CompressorConfiguration> _compressors;

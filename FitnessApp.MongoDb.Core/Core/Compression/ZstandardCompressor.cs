@@ -19,7 +19,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Compression
 {
-    internal class ZstandardCompressor : ICompressor
+    public class ZstandardCompressor : ICompressor
     {
         // private constants
         private const int _defaultCompressionLevel = 6;

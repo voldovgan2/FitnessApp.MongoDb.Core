@@ -18,7 +18,7 @@ using System.Runtime.InteropServices;
 
 namespace MongoDB.Driver.Core.Authentication.Libgssapi
 {
-    internal abstract class GssapiSafeHandle : SafeHandle
+    public abstract class GssapiSafeHandle : SafeHandle
     {
         protected GssapiSafeHandle() : base(IntPtr.Zero, true)
         {

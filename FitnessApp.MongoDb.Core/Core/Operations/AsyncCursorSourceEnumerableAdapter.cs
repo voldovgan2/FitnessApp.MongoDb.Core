@@ -21,7 +21,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal class AsyncCursorSourceEnumerableAdapter<TDocument> : IEnumerable<TDocument>
+    public class AsyncCursorSourceEnumerableAdapter<TDocument> : IEnumerable<TDocument>
     {
         // private fields
         private readonly CancellationToken _cancellationToken;

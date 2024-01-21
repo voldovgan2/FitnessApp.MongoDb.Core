@@ -22,7 +22,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Authentication.External
 {
-    internal sealed class AzureCredentials : IExternalCredentials
+    public sealed class AzureCredentials : IExternalCredentials
     {
         // credentials are considered expired when: Expiration - now < 1 mins
         private static readonly TimeSpan __overlapWhereExpired = TimeSpan.FromMinutes(1);
@@ -43,7 +43,7 @@ namespace MongoDB.Driver.Core.Authentication.External
         public BsonDocument GetKmsCredentials() => new BsonDocument("accessToken", _accessToken);
     }
 
-    internal sealed class AzureAuthenticationCredentialsProvider : IExternalAuthenticationCredentialsProvider<AzureCredentials>
+    public sealed class AzureAuthenticationCredentialsProvider : IExternalAuthenticationCredentialsProvider<AzureCredentials>
     {
         private readonly AzureHttpClientHelper _azureHttpClientHelper;
 

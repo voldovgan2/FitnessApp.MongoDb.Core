@@ -18,7 +18,7 @@ using System.Threading;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal sealed class ReferenceCounted<T> where T : class, IDisposable
+    public sealed class ReferenceCounted<T> where T : class, IDisposable
     {
         // fields
         private readonly T _instance;

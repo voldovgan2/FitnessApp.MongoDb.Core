@@ -18,7 +18,7 @@ using System.Threading;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal sealed class Metronome
+    public sealed class Metronome
     {
         // fields
         private readonly IClock _clock;

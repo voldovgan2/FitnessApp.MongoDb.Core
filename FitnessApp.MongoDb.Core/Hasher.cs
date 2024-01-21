@@ -19,7 +19,7 @@ using System.Runtime.CompilerServices;
 
 namespace MongoDB.Shared
 {
-    internal class Hasher
+    public class Hasher
     {
         #region static 
 

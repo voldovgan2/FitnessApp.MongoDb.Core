@@ -26,7 +26,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Clusters
 {
-    internal class DnsMonitor : IDnsMonitor
+    public class DnsMonitor : IDnsMonitor
     {
         #region static
         private static string EnsureLookupDomainNameIsValid(string lookupDomainName)

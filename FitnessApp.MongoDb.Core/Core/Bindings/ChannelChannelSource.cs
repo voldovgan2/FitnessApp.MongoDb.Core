@@ -21,7 +21,7 @@ using MongoDB.Driver.Core.Servers;
 
 namespace MongoDB.Driver.Core.Bindings
 {
-    internal sealed class ChannelChannelSource : IChannelSource
+    public sealed class ChannelChannelSource : IChannelSource
     {
         // fields
         private readonly IChannelHandle _channel;

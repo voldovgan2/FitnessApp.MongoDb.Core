@@ -29,7 +29,7 @@ namespace MongoDB.Driver.Core.Connections
     /// <summary>
     /// Represents a factory for a binary stream over a TCP/IP connection.
     /// </summary>
-    internal class TcpStreamFactory : IStreamFactory
+    public class TcpStreamFactory : IStreamFactory
     {
         // fields
         private readonly TcpStreamSettings _settings;

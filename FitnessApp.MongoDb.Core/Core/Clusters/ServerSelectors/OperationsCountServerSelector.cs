@@ -20,7 +20,7 @@ using MongoDB.Driver.Core.Servers;
 
 namespace MongoDB.Driver.Core.Clusters.ServerSelectors
 {
-    internal sealed class OperationsCountServerSelector : IServerSelector
+    public sealed class OperationsCountServerSelector : IServerSelector
     {
         private readonly IEnumerable<IClusterableServer> _clusterableServers;
 

@@ -23,7 +23,7 @@ namespace MongoDB.Driver.Core.Operations
     /// <summary>
     /// Represents the result of one batch executed using a write command.
     /// </summary>
-    internal class BulkWriteBatchResult
+    public class BulkWriteBatchResult
     {
         #region static
         // static fields

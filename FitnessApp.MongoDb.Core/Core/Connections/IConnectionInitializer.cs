@@ -21,7 +21,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Connections
 {
-    internal sealed class ConnectionInitializerContext
+    public sealed class ConnectionInitializerContext
     {
         public ConnectionInitializerContext(ConnectionDescription description, IReadOnlyList<IAuthenticator> authenticators)
         {
@@ -33,7 +33,7 @@ namespace MongoDB.Driver.Core.Connections
         public ConnectionDescription Description { get; }
     }
 
-    internal interface IConnectionInitializer
+    public interface IConnectionInitializer
     {
         ConnectionDescription Authenticate(IConnection connection, ConnectionInitializerContext connectionInitializerContext, CancellationToken cancellationToken);
         Task<ConnectionDescription> AuthenticateAsync(IConnection connection, ConnectionInitializerContext connectionInitializerContext, CancellationToken cancellationToken);

@@ -30,7 +30,7 @@ using MongoDB.Driver.Core.WireProtocol.Messages.Encoders;
 
 namespace MongoDB.Driver.Core.ConnectionPools
 {
-    internal sealed partial class ExclusiveConnectionPool
+    public sealed partial class ExclusiveConnectionPool
     {
         // private methods
         private Exception CreateTimeoutException(Stopwatch stopwatch, string message)
@@ -58,7 +58,7 @@ namespace MongoDB.Driver.Core.ConnectionPools
         }
 
         // nested classes
-        internal enum State
+        public enum State
         {
             Uninitialized,
             Paused,
@@ -68,7 +68,7 @@ namespace MongoDB.Driver.Core.ConnectionPools
         }
 
         // Not thread safe
-        internal sealed class PoolState
+        public sealed class PoolState
         {
             private static readonly bool[,] __transitions;
             private State _state;
@@ -345,7 +345,7 @@ namespace MongoDB.Driver.Core.ConnectionPools
             }
         }
 
-        internal sealed class PooledConnection : IConnection, ICheckOutReasonTracker
+        public sealed class PooledConnection : IConnection, ICheckOutReasonTracker
         {
             private CheckOutReason? _checkOutReason;
             private readonly IConnection _connection;
@@ -651,7 +651,7 @@ namespace MongoDB.Driver.Core.ConnectionPools
             }
         }
 
-        internal sealed class ListConnectionHolder
+        public sealed class ListConnectionHolder
         {
             private readonly SemaphoreSlimSignalable _semaphoreSlimSignalable;
             private readonly object _lock = new object();
@@ -830,7 +830,7 @@ namespace MongoDB.Driver.Core.ConnectionPools
             }
         }
 
-        internal sealed class ConnectionCreator : IDisposable
+        public sealed class ConnectionCreator : IDisposable
         {
             private readonly ExclusiveConnectionPool _pool;
             private readonly TimeSpan _connectingTimeout;

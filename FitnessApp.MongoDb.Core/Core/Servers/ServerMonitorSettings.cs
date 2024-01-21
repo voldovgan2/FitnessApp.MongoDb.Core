@@ -18,7 +18,7 @@ using System.Net;
 
 namespace MongoDB.Driver.Core.Servers
 {
-    internal class ServerMonitorSettings
+    public class ServerMonitorSettings
     {
         private readonly TimeSpan _connectTimeout;
         private readonly TimeSpan _heartbeatInterval;

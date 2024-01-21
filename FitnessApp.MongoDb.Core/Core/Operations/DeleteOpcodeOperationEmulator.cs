@@ -21,7 +21,7 @@ using MongoDB.Driver.Core.WireProtocol.Messages.Encoders;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal class DeleteOpcodeOperationEmulator : IExecutableInRetryableWriteContext<WriteConcernResult>
+    public class DeleteOpcodeOperationEmulator : IExecutableInRetryableWriteContext<WriteConcernResult>
     {
         // fields
         private readonly CollectionNamespace _collectionNamespace;

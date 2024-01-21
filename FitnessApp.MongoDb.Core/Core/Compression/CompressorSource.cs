@@ -35,7 +35,7 @@ namespace MongoDB.Driver.Core.Compression
         ICompressor Get(CompressorType compressorType);
     }
 
-    internal class CompressorSource : ICompressorSource
+    public class CompressorSource : ICompressorSource
     {
         #region static
         public static bool IsCompressorSupported(CompressorType compressorType)

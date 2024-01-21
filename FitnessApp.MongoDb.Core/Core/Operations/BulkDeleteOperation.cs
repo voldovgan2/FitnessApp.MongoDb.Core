@@ -19,7 +19,7 @@ using MongoDB.Driver.Core.WireProtocol.Messages.Encoders;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal class BulkDeleteOperation : BulkUnmixedWriteOperationBase<DeleteRequest>
+    public class BulkDeleteOperation : BulkUnmixedWriteOperationBase<DeleteRequest>
     {
         private BsonDocument _let;
 

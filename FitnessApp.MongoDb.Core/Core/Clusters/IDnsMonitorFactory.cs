@@ -17,7 +17,7 @@ using System.Threading;
 
 namespace MongoDB.Driver.Core.Clusters
 {
-    internal interface IDnsMonitorFactory
+    public interface IDnsMonitorFactory
     {
         IDnsMonitor CreateDnsMonitor(IDnsMonitoringCluster cluster, string lookupDomainName, CancellationToken cancellationToken);
     }

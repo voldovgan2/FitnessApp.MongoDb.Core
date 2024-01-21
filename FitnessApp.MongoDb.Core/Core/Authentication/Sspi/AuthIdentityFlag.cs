@@ -18,7 +18,7 @@ namespace MongoDB.Driver.Core.Authentication.Sspi
     /// <summary>
     /// Flag for the AuthIdentity structure.
     /// </summary>
-    internal enum AuthIdentityFlag
+    public enum AuthIdentityFlag
     {
         /// <summary>
         /// SEC_WINNT_AUTH_IDENTITY_ANSI

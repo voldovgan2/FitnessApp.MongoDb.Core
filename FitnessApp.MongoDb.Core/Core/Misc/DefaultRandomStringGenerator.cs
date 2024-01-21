@@ -18,7 +18,7 @@ using System.Text;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal class DefaultRandomStringGenerator : IRandomStringGenerator
+    public class DefaultRandomStringGenerator : IRandomStringGenerator
     {
         public string Generate(int length, string legalCharacters)
         {

@@ -24,7 +24,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Servers
 {
-    internal interface IRoundTripTimeMonitor : IDisposable
+    public interface IRoundTripTimeMonitor : IDisposable
     {
         TimeSpan Average { get; }
         void AddSample(TimeSpan roundTripTime);
@@ -32,7 +32,7 @@ namespace MongoDB.Driver.Core.Servers
         void Start();
     }
 
-    internal sealed class RoundTripTimeMonitor : IRoundTripTimeMonitor
+    public sealed class RoundTripTimeMonitor : IRoundTripTimeMonitor
     {
         private readonly ExponentiallyWeightedMovingAverage _averageRoundTripTimeCalculator = new ExponentiallyWeightedMovingAverage(0.2);
         private readonly CancellationToken _cancellationToken;

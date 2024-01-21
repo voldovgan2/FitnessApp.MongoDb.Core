@@ -28,7 +28,7 @@ namespace MongoDB.Driver.Core.Authentication.Sspi
     /// http://msdn.microsoft.com/en-us/library/windows/desktop/aa380495(v=vs.85).aspx
     /// </remarks>
     [StructLayout(LayoutKind.Sequential)]
-    internal struct SspiHandle
+    public struct SspiHandle
     {
         // private fields
         private IntPtr _hi;

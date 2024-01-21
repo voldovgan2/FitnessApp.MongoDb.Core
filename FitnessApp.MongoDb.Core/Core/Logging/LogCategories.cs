@@ -15,7 +15,7 @@
 
 namespace MongoDB.Driver.Core.Logging
 {
-    internal static class LogCategories
+    public static class LogCategories
     {
         public abstract class BaseCategory { }
 

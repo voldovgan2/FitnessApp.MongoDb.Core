@@ -17,7 +17,7 @@ using System;
 
 namespace MongoDB.Driver.Core.Authentication.Libgssapi
 {
-    internal sealed class GssapiServicePrincipalName : GssapiSafeHandle
+    public sealed class GssapiServicePrincipalName : GssapiSafeHandle
     {
         #region static
         public static GssapiServicePrincipalName Create(string service, string host, string realm)

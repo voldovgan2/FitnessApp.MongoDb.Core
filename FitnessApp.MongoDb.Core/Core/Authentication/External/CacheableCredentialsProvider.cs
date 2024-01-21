@@ -19,12 +19,12 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Authentication.External
 {
-    internal interface ICredentialsCache<TCredentials> where TCredentials : IExternalCredentials
+    public interface ICredentialsCache<TCredentials> where TCredentials : IExternalCredentials
     {
         void Clear();
     }
 
-    internal sealed class CacheableCredentialsProvider<TCredentials> : IExternalAuthenticationCredentialsProvider<TCredentials>, ICredentialsCache<TCredentials>
+    public sealed class CacheableCredentialsProvider<TCredentials> : IExternalAuthenticationCredentialsProvider<TCredentials>, ICredentialsCache<TCredentials>
         where TCredentials : IExternalCredentials
     {
         private TCredentials _cachedCredentials;

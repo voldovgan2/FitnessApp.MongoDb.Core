@@ -17,7 +17,7 @@ using System.Collections.Generic;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal abstract class IndexMap
+    public abstract class IndexMap
     {
         // private static fields
         private static readonly IndexMap __identityMap = new RangeBased(0, 0, int.MaxValue);

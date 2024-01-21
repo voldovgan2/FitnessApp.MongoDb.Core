@@ -27,7 +27,7 @@ using MongoDB.Driver.Core.WireProtocol;
 
 namespace MongoDB.Driver.Core.Servers
 {
-    internal sealed class ServerMonitor : IServerMonitor
+    public sealed class ServerMonitor : IServerMonitor
     {
         private readonly ServerDescription _baseDescription;
         private volatile IConnection _connection;

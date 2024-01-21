@@ -26,7 +26,7 @@ using MongoDB.Driver.Core.WireProtocol.Messages.Encoders;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal abstract class BulkUnmixedWriteOperationBase<TWriteRequest> : IWriteOperation<BulkWriteOperationResult>, IExecutableInRetryableWriteContext<BulkWriteOperationResult>
+    public abstract class BulkUnmixedWriteOperationBase<TWriteRequest> : IWriteOperation<BulkWriteOperationResult>, IExecutableInRetryableWriteContext<BulkWriteOperationResult>
         where TWriteRequest : WriteRequest
     {
         // fields

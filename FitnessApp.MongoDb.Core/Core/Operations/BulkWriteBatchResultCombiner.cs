@@ -21,7 +21,7 @@ using MongoDB.Driver.Core.Connections;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal class BulkWriteBatchResultCombiner
+    public class BulkWriteBatchResultCombiner
     {
         // fields
         private readonly IReadOnlyList<BulkWriteBatchResult> _batchResults;

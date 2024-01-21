@@ -21,7 +21,7 @@ namespace MongoDB.Driver.Core.Misc
     /// <summary>
     /// Thread-safe helper to manage a value.
     /// </summary>
-    internal class InterlockedInt32
+    public class InterlockedInt32
     {
         // fields
         private int _value;

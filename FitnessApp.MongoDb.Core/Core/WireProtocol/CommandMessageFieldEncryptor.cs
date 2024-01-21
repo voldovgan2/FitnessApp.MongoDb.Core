@@ -26,7 +26,7 @@ using MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders;
 
 namespace MongoDB.Driver.Core.WireProtocol
 {
-    internal class CommandMessageFieldEncryptor
+    public class CommandMessageFieldEncryptor
     {
         // private fields
         private readonly byte[] _buffer = new byte[1024];

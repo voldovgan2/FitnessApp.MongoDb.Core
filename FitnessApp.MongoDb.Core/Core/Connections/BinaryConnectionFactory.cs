@@ -25,7 +25,7 @@ namespace MongoDB.Driver.Core.Connections
     /// <summary>
     /// Represents a factory of BinaryConnections.
     /// </summary>
-    internal class BinaryConnectionFactory : IConnectionFactory
+    public class BinaryConnectionFactory : IConnectionFactory
     {
         // fields
         private readonly IConnectionInitializer _connectionInitializer;

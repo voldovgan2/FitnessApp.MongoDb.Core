@@ -18,7 +18,7 @@ using MongoDB.Bson;
 
 namespace MongoDB.Driver.Core.Authentication.External
 {
-    internal interface IExternalCredentials
+    public interface IExternalCredentials
     {
         DateTime? Expiration { get; }
         bool ShouldBeRefreshed { get; }

@@ -353,7 +353,7 @@ namespace MongoDB.Driver.Core.Operations
             return pipeline; // unchanged
         }
 
-        internal class MayUseSecondary : IMayUseSecondaryCriteria
+        public class MayUseSecondary : IMayUseSecondaryCriteria
         {
             public MayUseSecondary(ReadPreference readPreference)
             {

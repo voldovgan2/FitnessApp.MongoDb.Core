@@ -20,7 +20,7 @@ using MongoDB.Bson.IO;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal sealed class DecryptedSecureString : IDisposable
+    public sealed class DecryptedSecureString : IDisposable
     {
         // private fields
         private char[] _chars;

@@ -21,7 +21,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal class AsyncCursorEnumerator<TDocument> : IEnumerator<TDocument>
+    public class AsyncCursorEnumerator<TDocument> : IEnumerator<TDocument>
     {
         // private fields
         private IEnumerator<TDocument> _batchEnumerator;

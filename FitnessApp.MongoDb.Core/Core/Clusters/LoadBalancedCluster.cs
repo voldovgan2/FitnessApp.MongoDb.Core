@@ -35,7 +35,7 @@ namespace MongoDB.Driver.Core.Clusters
     /// <summary>
     /// Represents the cluster that uses load balanced mode.
     /// </summary>
-    internal class LoadBalancedCluster : ICluster, IDnsMonitoringCluster
+    public class LoadBalancedCluster : ICluster, IDnsMonitoringCluster
     {
         private readonly IClusterClock _clusterClock;
         private readonly ClusterId _clusterId;

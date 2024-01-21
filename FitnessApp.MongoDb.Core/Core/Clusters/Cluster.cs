@@ -35,7 +35,7 @@ namespace MongoDB.Driver.Core.Clusters
     /// <summary>
     /// Represents a cluster.
     /// </summary>
-    internal abstract class Cluster : ICluster
+    public abstract class Cluster : ICluster
     {
         #region static
         // static fields

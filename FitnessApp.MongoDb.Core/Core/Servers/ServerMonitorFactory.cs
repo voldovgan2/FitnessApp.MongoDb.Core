@@ -21,7 +21,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Servers
 {
-    internal class ServerMonitorFactory : IServerMonitorFactory
+    public class ServerMonitorFactory : IServerMonitorFactory
     {
         private readonly IConnectionFactory _connectionFactory;
         private readonly IEventSubscriber _eventSubscriber;

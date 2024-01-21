@@ -31,7 +31,7 @@ using MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders;
 
 namespace MongoDB.Driver.Core.Connections
 {
-    internal class CommandEventHelper
+    public class CommandEventHelper
     {
         private readonly EventLogger<LogCategories.Command> _eventLogger;
         private readonly ConcurrentDictionary<int, CommandState> _state;

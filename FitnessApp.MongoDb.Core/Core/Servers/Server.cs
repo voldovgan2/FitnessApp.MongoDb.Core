@@ -39,7 +39,7 @@ namespace MongoDB.Driver.Core.Servers
     /// <summary>
     /// Represents a server in a MongoDB cluster.
     /// </summary>
-    internal abstract class Server : IClusterableServer, IConnectionExceptionHandler
+    public abstract class Server : IClusterableServer, IConnectionExceptionHandler
     {
         // fields
         private readonly IClusterClock _clusterClock;

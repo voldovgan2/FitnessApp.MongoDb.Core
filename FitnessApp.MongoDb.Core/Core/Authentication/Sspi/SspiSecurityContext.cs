@@ -22,7 +22,7 @@ namespace MongoDB.Driver.Core.Authentication.Sspi
     /// <summary>
     /// A wrapper around the SspiHandle structure specifically used as a security context handle.
     /// </summary>
-    internal class SspiSecurityContext : SafeHandle, ISecurityContext
+    public class SspiSecurityContext : SafeHandle, ISecurityContext
     {
         // static fields
         private static readonly int __maxTokenSize;

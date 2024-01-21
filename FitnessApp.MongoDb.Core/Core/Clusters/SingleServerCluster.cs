@@ -27,7 +27,7 @@ namespace MongoDB.Driver.Core.Clusters
     /// <summary>
     /// Represents a standalone cluster.
     /// </summary>
-    internal sealed class SingleServerCluster : Cluster
+    public sealed class SingleServerCluster : Cluster
     {
         // fields
         private IClusterableServer _server;

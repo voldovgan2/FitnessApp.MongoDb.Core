@@ -19,7 +19,7 @@ using System.Threading;
 
 namespace MongoDB.Driver.Core.Clusters
 {
-    internal enum DnsMonitorState
+    public enum DnsMonitorState
     {
         Created,
         Running,
@@ -27,7 +27,7 @@ namespace MongoDB.Driver.Core.Clusters
         Stopped
     }
 
-    internal interface IDnsMonitor
+    public interface IDnsMonitor
     {
         DnsMonitorState State { get; }
         Exception UnhandledException { get; }

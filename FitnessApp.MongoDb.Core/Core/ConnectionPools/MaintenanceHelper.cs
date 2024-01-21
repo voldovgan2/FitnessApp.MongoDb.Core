@@ -21,7 +21,7 @@ using static MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool;
 namespace MongoDB.Driver.Core.ConnectionPools
 {
     // Not thread safe class. Start and Stop MUST be synchronized.
-    internal sealed class MaintenanceHelper : IDisposable
+    public sealed class MaintenanceHelper : IDisposable
     {
         private readonly ExclusiveConnectionPool _connectionPool;
         private readonly CancellationToken _globalCancellationToken;
@@ -135,7 +135,7 @@ namespace MongoDB.Driver.Core.ConnectionPools
         }
     }
 
-    internal sealed class MaintenanceExecutingContext : IDisposable
+    public sealed class MaintenanceExecutingContext : IDisposable
     {
         private readonly AutoResetEvent _autoResetEvent;
         private readonly CancellationToken _cancellationToken;

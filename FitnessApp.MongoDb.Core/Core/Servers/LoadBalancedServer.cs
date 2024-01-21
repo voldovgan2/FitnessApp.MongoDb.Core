@@ -26,7 +26,7 @@ using MongoDB.Driver.Core.Logging;
 
 namespace MongoDB.Driver.Core.Servers
 {
-    internal class LoadBalancedServer : Server
+    public class LoadBalancedServer : Server
     {
         private readonly ServerDescription _baseDescription;
         private ServerDescription _currentDescription;

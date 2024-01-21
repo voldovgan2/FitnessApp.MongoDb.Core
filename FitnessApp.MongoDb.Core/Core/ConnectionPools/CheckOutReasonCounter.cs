@@ -18,19 +18,19 @@ using System.Threading;
 
 namespace MongoDB.Driver.Core.ConnectionPools
 {
-    internal enum CheckOutReason
+    public enum CheckOutReason
     {
         Cursor,
         Transaction
     }
 
-    internal interface ICheckOutReasonTracker
+    public interface ICheckOutReasonTracker
     {
         CheckOutReason? CheckOutReason { get; }
         void SetCheckOutReasonIfNotAlreadySet(CheckOutReason reason);
     }
 
-    internal sealed class CheckOutReasonCounter
+    public sealed class CheckOutReasonCounter
     {
         public int _cursorCheckOutsCount = 0;
         public int _transactionCheckOutsCount = 0;

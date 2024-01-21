@@ -22,7 +22,7 @@ using MongoDB.Driver.Core.Configuration;
 
 namespace MongoDB.Driver.Core.Connections
 {
-    internal class ClientDocumentHelper
+    public class ClientDocumentHelper
     {
         #region static
         // private static fields
