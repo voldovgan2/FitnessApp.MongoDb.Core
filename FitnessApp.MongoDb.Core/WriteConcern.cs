@@ -499,7 +499,7 @@ namespace MongoDB.Driver
             #endregion
 
             // constructors
-            internal WValue()
+            public WValue()
             {
             }
 

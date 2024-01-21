@@ -33,7 +33,7 @@ namespace MongoDB.Driver.Core.Operations
     public class CreateCollectionOperation : IWriteOperation<BsonDocument>
     {
         #region static
-        internal static IWriteOperation<BsonDocument> CreateEncryptedCreateCollectionOperationIfConfigured(
+        public static IWriteOperation<BsonDocument> CreateEncryptedCreateCollectionOperationIfConfigured(
             CollectionNamespace collectionNamespace,
             BsonDocument encryptedFields,
             MessageEncoderSettings messageEncoderSettings,
@@ -191,7 +191,7 @@ namespace MongoDB.Driver.Core.Operations
             get { return _collectionNamespace; }
         }
 
-        internal BsonDocument EncryptedFields
+        public BsonDocument EncryptedFields
         {
             get { return _encryptedFields; }
             private set { _encryptedFields = value; }
@@ -366,7 +366,7 @@ namespace MongoDB.Driver.Core.Operations
         }
 
         // methods
-        internal BsonDocument CreateCommand(ICoreSessionHandle session)
+        public BsonDocument CreateCommand(ICoreSessionHandle session)
         {
             var flags = GetFlags();
             var writeConcern = WriteConcernHelper.GetEffectiveWriteConcern(session, _writeConcern);

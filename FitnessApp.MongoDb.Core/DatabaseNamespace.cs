@@ -70,7 +70,7 @@ namespace MongoDB.Driver
         }
 
         // properties
-        internal CollectionNamespace CommandCollection
+        public CollectionNamespace CommandCollection
         {
             get { return new CollectionNamespace(this, "$cmd"); }
         }
@@ -86,12 +86,12 @@ namespace MongoDB.Driver
             get { return _databaseName; }
         }
 
-        internal CollectionNamespace SystemIndexesCollection
+        public CollectionNamespace SystemIndexesCollection
         {
             get { return new CollectionNamespace(this, "system.indexes"); }
         }
 
-        internal CollectionNamespace SystemNamespacesCollection
+        public CollectionNamespace SystemNamespacesCollection
         {
             get { return new CollectionNamespace(this, "system.namespaces"); }
         }

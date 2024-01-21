@@ -178,7 +178,7 @@ namespace MongoDB.Driver.Core.Authentication
         {
         }
 
-        internal MongoAWSAuthenticator(
+        public MongoAWSAuthenticator(
             UsernamePasswordCredential credential,
             IEnumerable<KeyValuePair<string, string>> properties,
             IRandomByteGenerator randomByteGenerator,
@@ -190,7 +190,7 @@ namespace MongoDB.Driver.Core.Authentication
             _credentialsCache = externalAuthenticationCredentialsProvider as ICredentialsCache<AwsCredentials>; // can be null
         }
 
-        internal MongoAWSAuthenticator(
+        public MongoAWSAuthenticator(
             string username,
             IEnumerable<KeyValuePair<string, string>> properties,
             IRandomByteGenerator randomByteGenerator,

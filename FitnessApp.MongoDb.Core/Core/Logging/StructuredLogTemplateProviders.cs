@@ -26,7 +26,7 @@ using MongoDB.Driver.Core.Servers;
 
 namespace MongoDB.Driver.Core.Logging
 {
-    internal static partial class StructuredLogTemplateProviders
+    public static partial class StructuredLogTemplateProviders
     {
         public const string Awaited = nameof(Awaited);
         public const string Command = nameof(Command);

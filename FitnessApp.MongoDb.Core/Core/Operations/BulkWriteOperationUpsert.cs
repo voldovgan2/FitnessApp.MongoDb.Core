@@ -30,7 +30,7 @@ namespace MongoDB.Driver.Core.Operations
         private readonly int _index;
 
         // constructors
-        internal BulkWriteOperationUpsert(
+        public BulkWriteOperationUpsert(
             int index,
             BsonValue id)
         {
@@ -62,7 +62,7 @@ namespace MongoDB.Driver.Core.Operations
         }
 
         // methods
-        internal BulkWriteOperationUpsert WithMappedIndex(IndexMap indexMap)
+        public BulkWriteOperationUpsert WithMappedIndex(IndexMap indexMap)
         {
             var mappedIndex = indexMap.Map(_index);
             return (_index == mappedIndex) ? this : new BulkWriteOperationUpsert(mappedIndex, _id);

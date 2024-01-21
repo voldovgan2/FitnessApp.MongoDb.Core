@@ -280,7 +280,7 @@ namespace MongoDB.Driver.Core.Operations
             }
         }
 
-        internal BsonDocument CreateCommand(ICoreSessionHandle session, ConnectionDescription connectionDescription)
+        public BsonDocument CreateCommand(ICoreSessionHandle session, ConnectionDescription connectionDescription)
         {
             var readConcern = _readConcern != null
                 ? ReadConcernHelper.GetReadConcernForCommand(session, connectionDescription, _readConcern)

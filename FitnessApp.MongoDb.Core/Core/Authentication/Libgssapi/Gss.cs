@@ -18,7 +18,7 @@ using System.Runtime.InteropServices;
 
 namespace MongoDB.Driver.Core.Authentication.Libgssapi
 {
-    internal static class Gss
+    public static class Gss
     {
         public static void ThrowIfError(uint majorStatus, uint minorStatus)
         {

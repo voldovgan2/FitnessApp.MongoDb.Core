@@ -27,7 +27,7 @@ namespace MongoDB.Driver.Core.Authentication.Sspi
     /// </remarks>
     [SuppressMessage("Microsoft.Design", "CA1049:TypesThatOwnNativeResourcesShouldBeDisposable", Justification = "Implementing IDisposable on a struct leads to memory leaks.")]
     [StructLayout(LayoutKind.Sequential)]
-    internal struct SecurityBuffer
+    public struct SecurityBuffer
     {
         // fields
         public int Count;

@@ -18,7 +18,7 @@ using System.Text;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal static class StringBuilderExtensionMethods
+    public static class StringBuilderExtensionMethods
     {
         public static StringBuilder AppendIf(this StringBuilder sb, bool condition, string value)
         {

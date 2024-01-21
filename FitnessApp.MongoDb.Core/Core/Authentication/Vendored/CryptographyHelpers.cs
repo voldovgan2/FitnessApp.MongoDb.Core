@@ -47,7 +47,7 @@ using System.Security.Cryptography;
 
 namespace MongoDB.Driver.Core.Authentication.Vendored
 {
-    internal static class CryptographyHelpers
+    public static class CryptographyHelpers
     {
 
         private static readonly string Cryptography_MissingIV
@@ -162,7 +162,7 @@ namespace MongoDB.Driver.Core.Authentication.Vendored
             return oddParityKey;
         }
 
-        internal static void ConvertIntToByteArray(uint value, byte[] dest)
+        public static void ConvertIntToByteArray(uint value, byte[] dest)
         {
             Debug.Assert(dest != null);
             Debug.Assert(dest.Length == 4);

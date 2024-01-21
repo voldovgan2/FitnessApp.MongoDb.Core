@@ -30,7 +30,7 @@ namespace MongoDB.Driver
     {
         #region static
         // static methods
-        internal static void ThrowIfNotSupported(ClusterDescription description)
+        public static void ThrowIfNotSupported(ClusterDescription description)
         {
             var isIncompatible = description.Servers.Any(IsServerIncompatible);
 

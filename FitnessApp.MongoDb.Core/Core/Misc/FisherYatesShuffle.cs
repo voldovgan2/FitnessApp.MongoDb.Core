@@ -17,7 +17,7 @@ using System.Collections.Generic;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal static class FisherYatesShuffle
+    public static class FisherYatesShuffle
     {
         public static void Shuffle<T>(IList<T> list)
         {

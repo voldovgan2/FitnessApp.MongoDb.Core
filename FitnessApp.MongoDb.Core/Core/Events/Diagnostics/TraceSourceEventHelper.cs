@@ -25,7 +25,7 @@ using MongoDB.Driver.Core.Servers;
 
 namespace MongoDB.Driver.Core.Events.Diagnostics
 {
-    internal static class TraceSourceEventHelper
+    public static class TraceSourceEventHelper
     {
         public const int CommandIdBase = 100;
         public const int ConnectionIdBase = 200;

@@ -805,9 +805,9 @@ namespace MongoDB.Driver.Core.Misc
         /// </summary>
         public string Name => _name;
 
-        internal int FirstSupportedWireVersion => _firstSupportedWireVersion;
+        public int FirstSupportedWireVersion => _firstSupportedWireVersion;
 
-        internal int LastNotSupportedWireVersion
+        public int LastNotSupportedWireVersion
         {
             get
             {
@@ -820,14 +820,14 @@ namespace MongoDB.Driver.Core.Misc
         /// </summary>
         public string NotSupportedMessage => _notSupportedMessage;
 
-        internal bool IsSupported(int wireVersion)
+        public bool IsSupported(int wireVersion)
         {
             return _supportRemovedWireVersion.HasValue
                 ? _firstSupportedWireVersion <= wireVersion && _supportRemovedWireVersion > wireVersion
                 : _firstSupportedWireVersion <= wireVersion;
         }
 
-        internal void ThrowIfNotSupported(int wireVersion)
+        public void ThrowIfNotSupported(int wireVersion)
         {
             if (!IsSupported(wireVersion))
             {

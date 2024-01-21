@@ -39,7 +39,7 @@ namespace MongoDB.Driver.Core.Authentication
     /// <summary>
     /// Utility class for Sasl string preparation.
     /// </summary>
-    internal static class SaslPrepHelper
+    public static class SaslPrepHelper
     {
         private const int MinCodepoint = 0x00;
         private const int MaxCodepoint = 0x10FFFF;

@@ -19,9 +19,9 @@ using System.Threading.Tasks;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal static class TaskExtensions
+    public static class TaskExtensions
     {
-        internal struct YieldNoContextAwaitable
+        public struct YieldNoContextAwaitable
         {
             public YieldNoContextAwaiter GetAwaiter() { return new YieldNoContextAwaiter(); }
 

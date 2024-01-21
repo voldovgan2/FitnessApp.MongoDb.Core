@@ -31,7 +31,7 @@ namespace MongoDB.Driver.Core.Misc
         {
         }
 
-        internal Metronome(TimeSpan period, IClock clock)
+        public Metronome(TimeSpan period, IClock clock)
         {
             _period = Ensure.IsInfiniteOrGreaterThanOrEqualToZero(period, nameof(period));
             _clock = Ensure.IsNotNull(clock, nameof(clock));

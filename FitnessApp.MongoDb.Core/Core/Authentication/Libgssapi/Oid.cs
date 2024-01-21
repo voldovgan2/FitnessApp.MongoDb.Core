@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 namespace MongoDB.Driver.Core.Authentication.Libgssapi
 {
     [StructLayout(LayoutKind.Sequential)]
-    internal struct Oid
+    public struct Oid
     {
         #region static
         public static readonly IntPtr GSS_C_NO_OID = IntPtr.Zero;

@@ -17,7 +17,7 @@ using System.Collections.Generic;
 
 namespace MongoDB.Driver.Core
 {
-    internal static class IDictionaryExtensions
+    public static class IDictionaryExtensions
     {
         public static void AddRange<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, IEnumerable<KeyValuePair<TKey, TValue>> values)
         {

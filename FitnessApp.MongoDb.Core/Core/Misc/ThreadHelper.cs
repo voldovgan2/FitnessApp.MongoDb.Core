@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal static class ThreadHelper
+    public static class ThreadHelper
     {
         public static void Sleep(TimeSpan timeout, CancellationToken cancellationToken)
         {

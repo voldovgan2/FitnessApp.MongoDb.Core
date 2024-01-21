@@ -22,7 +22,7 @@ namespace MongoDB.Driver.Core.Connections
     // https://msdn.microsoft.com/en-us/library/windows/desktop/dd877220(v=vs.85).aspx
     // note: a u_long in C is 4 bytes so the C# equivalent is uint
 
-    internal struct KeepAliveValues
+    public struct KeepAliveValues
     {
         public uint OnOff { get; set; }
         public uint KeepAliveTime { get; set; }

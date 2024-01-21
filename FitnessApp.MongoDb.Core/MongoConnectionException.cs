@@ -136,7 +136,7 @@ namespace MongoDB.Driver
         // properties
         // TODO temporary property for propagating exception generation to server
         // Will be reconsider after SDAM spec error handling adjustments
-        internal int? Generation
+        public int? Generation
         {
             get { return _generation; }
             set
@@ -153,7 +153,7 @@ namespace MongoDB.Driver
         /// <summary>
         /// A value for propagating a serviceId to the SDAM logic after handshake completed but before acquiring connection.
         /// </summary>
-        internal ObjectId? ServiceId
+        public ObjectId? ServiceId
         {
             get { return _serviceId; }
             set

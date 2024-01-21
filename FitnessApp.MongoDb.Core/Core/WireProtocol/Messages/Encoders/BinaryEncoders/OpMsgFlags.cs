@@ -18,7 +18,7 @@ using System;
 namespace MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders
 {
     [Flags]
-    internal enum OpMsgFlags
+    public enum OpMsgFlags
     {
         ChecksumPresent = 1 << 0,
         MoreToCome = 1 << 1,

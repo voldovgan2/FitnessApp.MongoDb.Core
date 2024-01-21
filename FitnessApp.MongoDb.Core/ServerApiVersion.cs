@@ -39,7 +39,7 @@ namespace MongoDB.Driver
         private readonly string _versionString;
 
         // constructors
-        internal ServerApiVersion(string versionString)
+        public ServerApiVersion(string versionString)
         {
             _versionString = Ensure.IsNotNull(versionString, nameof(versionString));
         }

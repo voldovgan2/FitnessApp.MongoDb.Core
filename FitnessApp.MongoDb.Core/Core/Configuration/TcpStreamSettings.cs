@@ -63,7 +63,7 @@ namespace MongoDB.Driver.Core.Configuration
             _writeTimeout = Ensure.IsNullOrInfiniteOrGreaterThanOrEqualToZero(writeTimeout.WithDefault(null), "writeTimeout");
         }
 
-        internal TcpStreamSettings(TcpStreamSettings other)
+        public TcpStreamSettings(TcpStreamSettings other)
         {
             _addressFamily = other.AddressFamily;
             _connectTimeout = other.ConnectTimeout;

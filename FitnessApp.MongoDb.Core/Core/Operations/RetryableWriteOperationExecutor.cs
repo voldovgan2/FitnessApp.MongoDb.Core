@@ -22,7 +22,7 @@ using MongoDB.Driver.Core.Servers;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal static class RetryableWriteOperationExecutor
+    public static class RetryableWriteOperationExecutor
     {
         // public static methods
         public static TResult Execute<TResult>(IRetryableWriteOperation<TResult> operation, IWriteBinding binding, bool retryRequested, CancellationToken cancellationToken)

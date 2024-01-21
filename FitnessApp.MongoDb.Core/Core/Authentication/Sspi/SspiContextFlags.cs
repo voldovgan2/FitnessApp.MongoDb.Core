@@ -25,7 +25,7 @@ namespace MongoDB.Driver.Core.Authentication.Sspi
     /// http://msdn.microsoft.com/en-us/library/windows/desktop/aa375507(v=vs.85).aspx
     /// </remarks>
     [Flags]
-    internal enum SspiContextFlags
+    public enum SspiContextFlags
     {
         None = 0,
         /// <summary>

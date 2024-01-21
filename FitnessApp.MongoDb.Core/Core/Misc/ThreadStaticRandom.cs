@@ -17,7 +17,7 @@ using System;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal static class ThreadStaticRandom
+    public static class ThreadStaticRandom
     {
         // static fields
         [ThreadStatic]

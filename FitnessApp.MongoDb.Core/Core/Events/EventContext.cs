@@ -19,7 +19,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Events
 {
-    internal static class EventContext
+    public static class EventContext
     {
         private static readonly AsyncLocal<int?> __findOperationBatchSize = new AsyncLocal<int?>();
         private static readonly AsyncLocal<int?> __findOperationLimit = new AsyncLocal<int?>();

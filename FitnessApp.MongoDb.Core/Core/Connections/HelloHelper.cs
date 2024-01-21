@@ -29,21 +29,21 @@ using MongoDB.Driver.Core.WireProtocol;
 
 namespace MongoDB.Driver.Core.Connections
 {
-    internal static class HelloHelper
+    public static class HelloHelper
     {
-        internal static BsonDocument AddClientDocumentToCommand(BsonDocument command, BsonDocument clientDocument)
+        public static BsonDocument AddClientDocumentToCommand(BsonDocument command, BsonDocument clientDocument)
         {
             return command.Add("client", clientDocument, clientDocument != null);
         }
 
-        internal static BsonDocument AddCompressorsToCommand(BsonDocument command, IEnumerable<CompressorConfiguration> compressors)
+        public static BsonDocument AddCompressorsToCommand(BsonDocument command, IEnumerable<CompressorConfiguration> compressors)
         {
             var compressorsArray = new BsonArray(compressors.Select(x => CompressorTypeMapper.ToServerName(x.Type)));
 
             return command.Add("compression", compressorsArray);
         }
 
-        internal static BsonDocument CreateCommand(ServerApi serverApi, bool helloOk = false, TopologyVersion topologyVersion = null, TimeSpan? maxAwaitTime = null, bool loadBalanced = false)
+        public static BsonDocument CreateCommand(ServerApi serverApi, bool helloOk = false, TopologyVersion topologyVersion = null, TimeSpan? maxAwaitTime = null, bool loadBalanced = false)
         {
             Ensure.That(
                 (topologyVersion == null && !maxAwaitTime.HasValue) ||
@@ -61,12 +61,12 @@ namespace MongoDB.Driver.Core.Connections
             };
         }
 
-        internal static BsonDocument CustomizeCommand(BsonDocument command, IReadOnlyList<IAuthenticator> authenticators)
+        public static BsonDocument CustomizeCommand(BsonDocument command, IReadOnlyList<IAuthenticator> authenticators)
         {
             return authenticators.Count == 1 ? authenticators[0].CustomizeInitialHelloCommand(command) : command;
         }
 
-        internal static CommandWireProtocol<BsonDocument> CreateProtocol(
+        public static CommandWireProtocol<BsonDocument> CreateProtocol(
             BsonDocument helloCommand,
             ServerApi serverApi,
             CommandResponseHandling commandResponseHandling = CommandResponseHandling.Return)
@@ -81,7 +81,7 @@ namespace MongoDB.Driver.Core.Connections
                 serverApi);
         }
 
-        internal static HelloResult GetResult(
+        public static HelloResult GetResult(
             IConnection connection,
             CommandWireProtocol<BsonDocument> helloProtocol,
             CancellationToken cancellationToken)
@@ -100,7 +100,7 @@ namespace MongoDB.Driver.Core.Connections
             }
         }
 
-        internal static async Task<HelloResult> GetResultAsync(
+        public static async Task<HelloResult> GetResultAsync(
             IConnection connection,
             CommandWireProtocol<BsonDocument> helloProtocol,
             CancellationToken cancellationToken)

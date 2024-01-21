@@ -20,7 +20,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal static class ReadConcernHelper
+    public static class ReadConcernHelper
     {
         public static BsonDocument GetReadConcernForCommand(ICoreSession session, ConnectionDescription connectionDescription, ReadConcern readConcern)
         {

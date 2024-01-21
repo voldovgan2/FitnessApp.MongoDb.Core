@@ -20,7 +20,7 @@ using MongoDB.Driver.Core.Servers;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal static class QueryHelper
+    public static class QueryHelper
     {
         public static int CalculateFirstBatchSize(int? limit, int? batchSize)
         {

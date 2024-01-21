@@ -22,7 +22,7 @@ namespace MongoDB.Driver.Core.Events
     /// <summary>
     /// Occurs when entering selection wait queue.
     /// </summary>
-    internal struct ClusterEnteredSelectionQueueEvent : IEvent
+    public struct ClusterEnteredSelectionQueueEvent : IEvent
     {
         public ClusterDescription ClusterDescription { get; }
         public long? OperationId { get; }

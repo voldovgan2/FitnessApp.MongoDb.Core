@@ -177,7 +177,7 @@ namespace MongoDB.Driver.Core.Operations
             }
         }
 
-        internal BsonDocument CreateExplainCommand(ConnectionDescription connectionDescription, ICoreSession session)
+        public BsonDocument CreateExplainCommand(ConnectionDescription connectionDescription, ICoreSession session)
         {
             var explainableCommand = _explainableOperation.CreateCommand(connectionDescription, session);
             return new BsonDocument

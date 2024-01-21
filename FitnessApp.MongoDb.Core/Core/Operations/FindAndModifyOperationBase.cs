@@ -208,7 +208,7 @@ namespace MongoDB.Driver.Core.Operations
         // private methods
         private IDisposable BeginOperation() => EventContext.BeginOperation("findAndModify");
 
-        internal abstract BsonDocument CreateCommand(ICoreSessionHandle session, ConnectionDescription connectionDescription, long? transactionNumber);
+        public abstract BsonDocument CreateCommand(ICoreSessionHandle session, ConnectionDescription connectionDescription, long? transactionNumber);
 
         private WriteCommandOperation<RawBsonDocument> CreateOperation(ICoreSessionHandle session, ConnectionDescription connectionDescription, long? transactionNumber)
         {

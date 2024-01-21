@@ -32,7 +32,7 @@ namespace MongoDB.Driver.Core.Authentication
         /// An H function as defined in RFC5802.
         /// </summary>
         /// <param name="data">The data to hash. Also called "str" in RFC5802.</param>
-        protected internal delegate byte[] H(byte[] data);
+        public delegate byte[] H(byte[] data);
 
         /// <summary>
         /// A Hi function used to compute the SaltedPassword as defined in RFC5802, except with "str" parameter replaced
@@ -43,7 +43,7 @@ namespace MongoDB.Driver.Core.Authentication
         /// parameter would be in RFC5802's Hi</param>
         /// <param name="salt">The salt.</param>
         /// <param name="iterations">The iteration count.</param>
-        protected internal delegate byte[] Hi(UsernamePasswordCredential credentials, byte[] salt, int iterations);
+        public delegate byte[] Hi(UsernamePasswordCredential credentials, byte[] salt, int iterations);
 
         /// <summary>
         /// An HMAC function as defined in RFC5802, plus the encoding of the data.
@@ -51,7 +51,7 @@ namespace MongoDB.Driver.Core.Authentication
         /// <param name="encoding">The encoding of the data.</param>
         /// <param name="data">The data. Also called "str" in RFC5802.</param>
         /// <param name="key">The key.</param>
-        protected internal delegate byte[] Hmac(UTF8Encoding encoding, byte[] data, string key);
+        public delegate byte[] Hmac(UTF8Encoding encoding, byte[] data, string key);
 
         // fields
         private readonly string _databaseName;
@@ -107,7 +107,7 @@ namespace MongoDB.Driver.Core.Authentication
         /// <param name="hmac">The Hmac function to use.</param>
         /// <param name="cache">The cache to use.</param>
         /// <param name="serverApi">The server API.</param>
-        internal ScramShaAuthenticator(
+        public ScramShaAuthenticator(
             UsernamePasswordCredential credential,
             HashAlgorithmName hashAlgorithName,
             IRandomStringGenerator randomStringGenerator,

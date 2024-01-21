@@ -21,7 +21,7 @@ using MongoDB.Bson.IO;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal static class StreamExtensionMethods
+    public static class StreamExtensionMethods
     {
         // static methods
         public static void EfficientCopyTo(this Stream input, Stream output)

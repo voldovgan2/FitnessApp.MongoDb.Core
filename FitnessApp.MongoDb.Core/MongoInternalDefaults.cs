@@ -15,7 +15,7 @@
 
 namespace MongoDB.Driver
 {
-    internal static class MongoInternalDefaults
+    public static class MongoInternalDefaults
     {
         public static class Logging
         {

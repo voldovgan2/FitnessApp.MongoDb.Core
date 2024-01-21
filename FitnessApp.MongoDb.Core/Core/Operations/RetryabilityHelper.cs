@@ -20,7 +20,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal static class RetryabilityHelper
+    public static class RetryabilityHelper
     {
         // private constants
         private const string ResumableChangeStreamErrorLabel = "ResumableChangeStreamError";

@@ -60,7 +60,7 @@ namespace MongoDB.Driver.Core.Bindings
             _serverSession = new Lazy<ICoreServerSession>(() => serverSession);
         }
 
-        internal CoreSession(
+        public CoreSession(
             ICluster cluster,
             ICoreServerSessionPool serverSessionPool,
             CoreSessionOptions options)

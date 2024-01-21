@@ -20,7 +20,7 @@ using MongoDB.Driver.Core.Bindings;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal static class RetryableReadOperationExecutor
+    public static class RetryableReadOperationExecutor
     {
         // public static methods
         public static TResult Execute<TResult>(IRetryableReadOperation<TResult> operation, IReadBinding binding, bool retryRequested, CancellationToken cancellationToken)

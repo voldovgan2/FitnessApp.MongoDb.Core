@@ -18,7 +18,7 @@ using MongoDB.Driver.Core.Events;
 
 namespace MongoDB.Driver.Core.Logging
 {
-    internal static class LoggerFactoryExtensions
+    public static class LoggerFactoryExtensions
     {
         public static EventLogger<T> CreateEventLogger<T>(this ILoggerFactory loggerFactory, IEventSubscriber eventSubscriber)
             where T : LogCategories.EventCategory

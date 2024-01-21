@@ -157,7 +157,7 @@ namespace MongoDB.Driver.Core.Misc
             return endPoint;
         }
 
-        internal static (string Host, int Port) GetHostAndPort(this EndPoint endPoint) =>
+        public static (string Host, int Port) GetHostAndPort(this EndPoint endPoint) =>
             endPoint switch
             {
                 DnsEndPoint dnsEndPoint => (dnsEndPoint.Host, dnsEndPoint.Port),
@@ -194,7 +194,7 @@ namespace MongoDB.Driver.Core.Misc
             return TryParse(value, 27017, out result);
         }
 
-        internal static bool TryParse(string value, int defaultPort, out EndPoint result)
+        public static bool TryParse(string value, int defaultPort, out EndPoint result)
         {
             result = null;
 

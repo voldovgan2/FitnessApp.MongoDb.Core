@@ -29,9 +29,8 @@ namespace MongoDB.Driver.Core.Clusters
     public sealed class ClusterDescription : IEquatable<ClusterDescription>
     {
         #region static
-        // internal static methods
 #pragma warning disable CS0618 // Type or member is obsolete
-        internal static ClusterDescription CreateInitial(ClusterId clusterId, ClusterConnectionMode connectionMode, ConnectionModeSwitch connectionModeSwitch, bool? directConnection)
+        public static ClusterDescription CreateInitial(ClusterId clusterId, ClusterConnectionMode connectionMode, ConnectionModeSwitch connectionModeSwitch, bool? directConnection)
         {
             return new ClusterDescription(
                 clusterId,
@@ -147,7 +146,7 @@ namespace MongoDB.Driver.Core.Clusters
         }
 
 #pragma warning disable CS0618 // Type or member is obsolete
-        internal ClusterDescription(
+        public ClusterDescription(
             ClusterId clusterId,
             ClusterConnectionMode connectionMode,
             ConnectionModeSwitch connectionModeSwitch,

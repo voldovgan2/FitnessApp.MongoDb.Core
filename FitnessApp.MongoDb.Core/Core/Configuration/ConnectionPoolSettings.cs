@@ -148,9 +148,7 @@ namespace MongoDB.Driver.Core.Configuration
         {
             get { return _waitQueueTimeout; }
         }
-
-        // internal properties
-        internal bool IsPausable
+        public bool IsPausable
         {
             get { return _isPausable; }
         }
@@ -183,7 +181,7 @@ namespace MongoDB.Driver.Core.Configuration
                 maxConnecting: maxConnecting.WithDefault(_maxConnecting));
         }
 
-        internal ConnectionPoolSettings WithInternal(Optional<bool> isPausable = default(Optional<bool>)) =>
+        public ConnectionPoolSettings WithInternal(Optional<bool> isPausable = default(Optional<bool>)) =>
             new ConnectionPoolSettings(
                 maintenanceInterval: _maintenanceInterval,
                 maxConnections: _maxConnections,

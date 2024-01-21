@@ -18,7 +18,7 @@ using MongoDB.Driver.Core.Configuration;
 
 namespace MongoDB.Driver.Core.Logging
 {
-    internal static class LoggingSettingsExtensions
+    public static class LoggingSettingsExtensions
     {
         public static ILoggerFactory ToInternalLoggerFactory(this LoggingSettings loggingSettings) =>
             loggingSettings?.LoggerFactory switch

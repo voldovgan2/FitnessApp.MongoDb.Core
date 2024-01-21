@@ -81,7 +81,7 @@ namespace MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders
             return ReadMessage<BsonDocument>(BsonDocumentSerializer.Instance);
         }
 
-        internal QueryMessage ReadMessage<TDocument>(IBsonSerializer<TDocument> serializer)
+        public QueryMessage ReadMessage<TDocument>(IBsonSerializer<TDocument> serializer)
             where TDocument : BsonDocument
         {
             var binaryReader = CreateBinaryReader();

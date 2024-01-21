@@ -24,7 +24,7 @@ namespace MongoDB.Driver.Core.Authentication.Sspi
     /// http://msdn.microsoft.com/en-us/library/windows/desktop/aa380104(v=vs.85).aspx
     /// </remarks>
     [StructLayout(LayoutKind.Sequential)]
-    internal struct SecurityPackageInfo
+    public struct SecurityPackageInfo
     {
         public uint Capabilities;
         public ushort Version;

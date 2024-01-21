@@ -18,7 +18,7 @@ using System.Collections.Generic;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal static class WireVersion
+    public static class WireVersion
     {
         /// <summary>
         /// Wire version 0.

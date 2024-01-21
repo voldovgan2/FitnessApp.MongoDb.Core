@@ -19,9 +19,9 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal static class FindProjectionChecker
+    public static class FindProjectionChecker
     {
-        internal static void ThrowIfAggregationExpressionIsUsedWhenNotSupported(BsonDocument projection, int wireVersion)
+        public static void ThrowIfAggregationExpressionIsUsedWhenNotSupported(BsonDocument projection, int wireVersion)
         {
             if (projection == null || Feature.FindProjectionExpressions.IsSupported(wireVersion))
             {

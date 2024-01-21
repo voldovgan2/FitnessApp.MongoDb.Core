@@ -18,7 +18,7 @@ namespace MongoDB.Driver.Core.Authentication.Sspi
     /// <summary>
     /// Types for the SecurityBuffer structure.
     /// </summary>
-    internal enum SecurityBufferType
+    public enum SecurityBufferType
     {
         /// <summary>
         /// SECBUFFER_VERSION

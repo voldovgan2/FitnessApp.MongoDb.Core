@@ -336,9 +336,7 @@ namespace MongoDB.Driver.Core.Configuration
                 scheme: scheme.WithDefault(_scheme),
                 srvMaxHosts: srvMaxHosts.WithDefault(_srvMaxHosts));
         }
-
-        // internal methods
-        internal ClusterType GetInitialClusterType()
+        public ClusterType GetInitialClusterType()
         {
             if (_loadBalanced)
             {

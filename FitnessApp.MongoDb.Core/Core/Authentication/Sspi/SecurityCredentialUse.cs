@@ -21,7 +21,7 @@ namespace MongoDB.Driver.Core.Authentication.Sspi
     /// <remarks>
     /// See the fCredentialUse at http://msdn.microsoft.com/en-us/library/windows/desktop/aa374712(v=vs.85).aspx.
     /// </remarks>
-    internal enum SecurityCredentialUse
+    public enum SecurityCredentialUse
     {
         /// <summary>
         /// SECPKG_CRED_OUTBOUND

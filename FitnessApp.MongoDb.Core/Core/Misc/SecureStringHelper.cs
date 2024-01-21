@@ -18,7 +18,7 @@ using System.Security;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal static class SecureStringHelper
+    public static class SecureStringHelper
     {
         /// <summary>
         /// Should only be used when the safety of the data cannot be guaranteed.

@@ -76,7 +76,7 @@ namespace MongoDB.Driver.Core.Servers
             return null;
         }
 
-        internal static TopologyVersion FromMongoCommandResponse(BsonDocument response)
+        public static TopologyVersion FromMongoCommandResponse(BsonDocument response)
         {
             if (response != null &&
                 response.TryGetValue("topologyVersion", out var topologyVersionValue) && topologyVersionValue is BsonDocument topologyVersion)
@@ -87,7 +87,7 @@ namespace MongoDB.Driver.Core.Servers
             return null;
         }
 
-        internal static TopologyVersion FromMongoCommandException(MongoCommandException commandException)
+        public static TopologyVersion FromMongoCommandException(MongoCommandException commandException)
         {
             return FromMongoCommandResponse(commandException.Result);
         }

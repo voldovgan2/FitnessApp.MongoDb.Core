@@ -42,12 +42,12 @@ namespace MongoDB.Driver.Core.Connections
         static ClientDocumentHelper() => Initialize();
 
         // private static methods
-        internal static BsonDocument CreateClientDocument(string applicationName, LibraryInfo libraryInfo)
+        public static BsonDocument CreateClientDocument(string applicationName, LibraryInfo libraryInfo)
         {
             return CreateClientDocument(applicationName, __driverDocument.Value, __osDocument.Value, __platformString.Value, __envDocument.Value, libraryInfo);
         }
 
-        internal static BsonDocument CreateClientDocument(string applicationName, BsonDocument driverDocument, BsonDocument osDocument, string platformString, BsonDocument envDocument, LibraryInfo libraryInfo)
+        public static BsonDocument CreateClientDocument(string applicationName, BsonDocument driverDocument, BsonDocument osDocument, string platformString, BsonDocument envDocument, LibraryInfo libraryInfo)
         {
             driverDocument = AppendLibraryInfoToDriverDocument(driverDocument, libraryInfo);
 
@@ -63,7 +63,7 @@ namespace MongoDB.Driver.Core.Connections
             return RemoveOptionalFieldsUntilDocumentIsLessThan512Bytes(clientDocument);
         }
 
-        internal static BsonDocument CreateDriverDocument()
+        public static BsonDocument CreateDriverDocument()
         {
             var assembly = typeof(ConnectionInitializer).GetTypeInfo().Assembly;
             var driverVersion = GetAssemblyVersion(assembly);
@@ -71,7 +71,7 @@ namespace MongoDB.Driver.Core.Connections
             return CreateDriverDocument(driverVersion);
         }
 
-        internal static BsonDocument CreateDriverDocument(string driverVersion)
+        public static BsonDocument CreateDriverDocument(string driverVersion)
         {
             var driverName = "mongo-csharp-driver";
             if (TryGetType("MongoDB.Driver.MongoServer, MongoDB.Driver.Legacy", out _))
@@ -93,7 +93,7 @@ namespace MongoDB.Driver.Core.Connections
             };
         }
 
-        internal static BsonDocument CreateEnvDocument()
+        public static BsonDocument CreateEnvDocument()
         {
             const string awsLambdaName = "aws.lambda";
             const string azureFuncName = "azure.func";
@@ -180,7 +180,7 @@ namespace MongoDB.Driver.Core.Connections
                 int.TryParse(Environment.GetEnvironmentVariable(environmentVariable), out var value) ? value : null;
         }
 
-        internal static BsonDocument CreateOSDocument()
+        public static BsonDocument CreateOSDocument()
         {
             string osType;
             string osName;
@@ -283,7 +283,7 @@ namespace MongoDB.Driver.Core.Connections
             return CreateOSDocument(osType, osName, architecture, osVersion);
         }
 
-        internal static BsonDocument CreateOSDocument(string osType, string osName, string architecture, string osVersion)
+        public static BsonDocument CreateOSDocument(string osType, string osName, string architecture, string osVersion)
         {
             return new BsonDocument
             {
@@ -294,12 +294,12 @@ namespace MongoDB.Driver.Core.Connections
             };
         }
 
-        internal static string GetPlatformString()
+        public static string GetPlatformString()
         {
             return RuntimeInformation.FrameworkDescription;
         }
 
-        internal static BsonDocument RemoveOneOptionalField(BsonDocument clientDocument)
+        public static BsonDocument RemoveOneOptionalField(BsonDocument clientDocument)
         {
             if (clientDocument.TryGetValue("env", out var env))
             {
@@ -366,7 +366,7 @@ namespace MongoDB.Driver.Core.Connections
             }
         }
 
-        internal static BsonDocument RemoveOptionalFieldsUntilDocumentIsLessThan512Bytes(BsonDocument clientDocument)
+        public static BsonDocument RemoveOptionalFieldsUntilDocumentIsLessThan512Bytes(BsonDocument clientDocument)
         {
             while (clientDocument != null && clientDocument.ToBson().Length > 512)
             {

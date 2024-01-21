@@ -18,7 +18,7 @@ using MongoDB.Driver.Core.Bindings;
 
 namespace MongoDB.Driver.Core.Operations
 {
-    internal static class WriteConcernHelper
+    public static class WriteConcernHelper
     {
         public static BsonDocument GetEffectiveWriteConcern(ICoreSession session, WriteConcern writeConcern)
         {

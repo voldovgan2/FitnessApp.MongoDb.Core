@@ -50,7 +50,7 @@ namespace MongoDB.Driver.Core.Misc
             private T _current;
             private T _next;
 
-            internal ReadAheadEnumerator(IEnumerator<T> wrapped)
+            public ReadAheadEnumerator(IEnumerator<T> wrapped)
             {
                 _wrapped = wrapped;
             }

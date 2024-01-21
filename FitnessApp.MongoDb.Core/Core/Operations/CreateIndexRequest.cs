@@ -342,7 +342,7 @@ namespace MongoDB.Driver.Core.Operations
         }
 
         // methods
-        internal BsonDocument CreateIndexDocument()
+        public BsonDocument CreateIndexDocument()
         {
             var document = new BsonDocument
             {

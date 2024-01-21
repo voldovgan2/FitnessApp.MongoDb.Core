@@ -27,7 +27,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Authentication
 {
-    internal static class AuthenticationHelper
+    public static class AuthenticationHelper
     {
         public static void Authenticate(IConnection connection, ConnectionDescription description, IReadOnlyList<IAuthenticator> authenticators, CancellationToken cancellationToken)
         {

@@ -33,7 +33,7 @@ namespace MongoDB.Driver.Core.Operations
     public class DropCollectionOperation : IWriteOperation<BsonDocument>
     {
         #region static
-        internal static IWriteOperation<BsonDocument> CreateEncryptedDropCollectionOperationIfConfigured(
+        public static IWriteOperation<BsonDocument> CreateEncryptedDropCollectionOperationIfConfigured(
             CollectionNamespace collectionNamespace,
             BsonDocument encryptedFields,
             MessageEncoderSettings messageEncoderSettings,
@@ -95,7 +95,7 @@ namespace MongoDB.Driver.Core.Operations
             get { return _collectionNamespace; }
         }
 
-        internal BsonDocument EncryptedFields
+        public BsonDocument EncryptedFields
         {
             get { return _encryptedFields; }
             private set { _encryptedFields = value; }
@@ -182,7 +182,7 @@ namespace MongoDB.Driver.Core.Operations
         }
 
         // private methods
-        internal BsonDocument CreateCommand(ICoreSessionHandle session)
+        public BsonDocument CreateCommand(ICoreSessionHandle session)
         {
             var writeConcern = WriteConcernHelper.GetEffectiveWriteConcern(session, _writeConcern);
             return new BsonDocument

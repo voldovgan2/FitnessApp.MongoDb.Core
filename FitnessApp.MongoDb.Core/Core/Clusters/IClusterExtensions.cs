@@ -24,7 +24,7 @@ namespace MongoDB.Driver.Core.Clusters
     /// <summary>
     /// This class contains extension methods for ICluster used for server selection with sharded transactions.
     /// </summary>
-    internal static class IClusterExtensions
+    public static class IClusterExtensions
     {
         public static IServer SelectServerAndPinIfNeeded(
             this ICluster cluster,

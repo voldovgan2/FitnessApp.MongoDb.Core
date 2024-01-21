@@ -18,7 +18,7 @@ using System.Threading;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal static class MaxTimeHelper
+    public static class MaxTimeHelper
     {
         public static int ToMaxTimeMS(TimeSpan value)
         {

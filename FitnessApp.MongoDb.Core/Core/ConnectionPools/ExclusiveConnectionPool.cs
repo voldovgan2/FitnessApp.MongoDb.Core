@@ -135,9 +135,7 @@ namespace MongoDB.Driver.Core.ConnectionPools
                 return _settings.MaxConnections - AvailableCount;
             }
         }
-
-        // internal properties
-        internal ListConnectionHolder ConnectionHolder => _connectionHolder;
+        public ListConnectionHolder ConnectionHolder => _connectionHolder;
 
         // public methods
         public IConnectionHandle AcquireConnection(CancellationToken cancellationToken)
@@ -263,9 +261,7 @@ namespace MongoDB.Driver.Core.ConnectionPools
             // fall back to not serviceId path
             return Generation;
         }
-
-        // internal methods
-        internal SemaphoreSlimSignalable.SemaphoreSlimSignalableAwaiter CreateMaxConnectionsAwaiter()
+        public SemaphoreSlimSignalable.SemaphoreSlimSignalableAwaiter CreateMaxConnectionsAwaiter()
         {
             return _maxConnectionsQueue.CreateAwaiter();
         }

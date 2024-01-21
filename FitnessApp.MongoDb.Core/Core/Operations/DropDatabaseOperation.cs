@@ -116,7 +116,7 @@ namespace MongoDB.Driver.Core.Operations
         }
 
         // private methods
-        internal BsonDocument CreateCommand(ICoreSessionHandle session)
+        public BsonDocument CreateCommand(ICoreSessionHandle session)
         {
             var writeConcern = WriteConcernHelper.GetEffectiveWriteConcern(session, _writeConcern);
             return new BsonDocument

@@ -20,7 +20,7 @@ using MongoDB.Bson;
 
 namespace MongoDB.Driver.Encryption
 {
-    internal static class EncryptedCollectionHelper
+    public static class EncryptedCollectionHelper
     {
         public static BsonDocument AdditionalCreateIndexDocument { get; } = new BsonDocument("__safeContent__", 1);
 

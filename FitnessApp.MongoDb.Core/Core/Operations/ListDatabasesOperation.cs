@@ -149,7 +149,7 @@ namespace MongoDB.Driver.Core.Operations
         }
 
         // private methods
-        internal BsonDocument CreateCommand()
+        public BsonDocument CreateCommand()
         {
             return new BsonDocument
             {

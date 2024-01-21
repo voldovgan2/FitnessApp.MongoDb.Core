@@ -21,7 +21,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Authentication
 {
-    internal static class SecurityContextFactory
+    public static class SecurityContextFactory
     {
         public static ISecurityContext InitializeSecurityContext(string serviceName, string hostname, string realm, string authorizationId, SecureString password)
         {

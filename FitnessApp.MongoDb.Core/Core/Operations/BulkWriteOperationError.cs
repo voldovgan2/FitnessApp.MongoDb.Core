@@ -117,7 +117,7 @@ namespace MongoDB.Driver.Core.Operations
         }
 
         // methods
-        internal BulkWriteOperationError WithMappedIndex(IndexMap indexMap)
+        public BulkWriteOperationError WithMappedIndex(IndexMap indexMap)
         {
             var mappedIndex = indexMap.Map(_index);
             return (_index == mappedIndex) ? this : new BulkWriteOperationError(mappedIndex, Code, Message, Details);

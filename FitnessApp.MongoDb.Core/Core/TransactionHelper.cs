@@ -18,9 +18,9 @@ using MongoDB.Driver.Core.Bindings;
 
 namespace MongoDB.Driver.Core
 {
-    internal static class TransactionHelper
+    public static class TransactionHelper
     {
-        internal static void UnpinServerIfNeededOnCommandException(ICoreSession session, Exception exception)
+        public static void UnpinServerIfNeededOnCommandException(ICoreSession session, Exception exception)
         {
             if (session.IsInTransaction && ShouldUnpinServerOnCommandException(exception))
             {
@@ -28,7 +28,7 @@ namespace MongoDB.Driver.Core
             }
         }
 
-        internal static void UnpinServerIfNeededOnRetryableCommitException(CoreTransaction transaction, Exception exception)
+        public static void UnpinServerIfNeededOnRetryableCommitException(CoreTransaction transaction, Exception exception)
         {
             if (ShouldUnpinServerOnRetryableCommitException(exception))
             {

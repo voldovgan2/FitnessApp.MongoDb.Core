@@ -54,11 +54,11 @@ namespace MongoDB.Driver.Core.Configuration
         /// <summary>
         /// Whether or not SDAM logging is enabled.
         /// </summary>
-        internal bool IsLoggingEnabled => !string.IsNullOrEmpty(_logFilename);
+        public bool IsLoggingEnabled => !string.IsNullOrEmpty(_logFilename);
 
         /// <summary>
         /// Whether or not logging should be written to stdout.
         /// </summary>
-        internal bool ShouldLogToStdout => _logFilename == "stdout";
+        public bool ShouldLogToStdout => _logFilename == "stdout";
     }
 }

@@ -18,14 +18,14 @@ using System.Runtime.InteropServices;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal enum OperatingSystemPlatform
+    public enum OperatingSystemPlatform
     {
         Windows,
         Linux,
         MacOS
     }
 
-    internal static class OperatingSystemHelper
+    public static class OperatingSystemHelper
     {
         public static OperatingSystemPlatform CurrentOperatingSystem => __currentOperatingSystem.Value;
 

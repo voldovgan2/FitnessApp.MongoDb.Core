@@ -140,7 +140,7 @@ namespace MongoDB.Driver.Core.Operations
 
         // methods
         /// <inheritdoc/>
-        protected internal override BsonDocument CreateCommand(ICoreSessionHandle session, ConnectionDescription connectionDescription)
+        protected override BsonDocument CreateCommand(ICoreSessionHandle session, ConnectionDescription connectionDescription)
         {
             var command = base.CreateCommand(session, connectionDescription);
 

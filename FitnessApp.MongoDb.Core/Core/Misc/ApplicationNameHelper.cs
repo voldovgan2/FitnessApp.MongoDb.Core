@@ -18,7 +18,7 @@ using MongoDB.Bson.IO;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal static class ApplicationNameHelper
+    public static class ApplicationNameHelper
     {
         public static string EnsureApplicationNameIsValid(string applicationName, string paramName)
         {

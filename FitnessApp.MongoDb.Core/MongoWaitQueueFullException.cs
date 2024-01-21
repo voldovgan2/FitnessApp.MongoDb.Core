@@ -28,7 +28,7 @@ namespace MongoDB.Driver
     {
         #region static
         // static methods
-        internal static MongoWaitQueueFullException ForConnectionPool(EndPoint endPoint)
+        public static MongoWaitQueueFullException ForConnectionPool(EndPoint endPoint)
         {
             var message = string.Format(
                 "The wait queue for acquiring a connection to server {0} is full.",
@@ -36,7 +36,7 @@ namespace MongoDB.Driver
             return new MongoWaitQueueFullException(message);
         }
 
-        internal static MongoWaitQueueFullException ForServerSelection()
+        public static MongoWaitQueueFullException ForServerSelection()
         {
             var message = "The wait queue for server selection is full.";
             return new MongoWaitQueueFullException(message);

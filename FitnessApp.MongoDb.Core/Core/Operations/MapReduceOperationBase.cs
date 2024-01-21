@@ -230,7 +230,7 @@ namespace MongoDB.Driver.Core.Operations
         /// <returns>
         /// The command.
         /// </returns>
-        protected internal virtual BsonDocument CreateCommand(ICoreSessionHandle session, ConnectionDescription connectionDescription)
+        protected virtual BsonDocument CreateCommand(ICoreSessionHandle session, ConnectionDescription connectionDescription)
         {
             return new BsonDocument
             {

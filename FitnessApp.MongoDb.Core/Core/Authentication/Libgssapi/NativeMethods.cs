@@ -18,7 +18,7 @@ using System.Runtime.InteropServices;
 
 namespace MongoDB.Driver.Core.Authentication.Libgssapi
 {
-    internal static class NativeMethods
+    public static class NativeMethods
     {
         private const string GSSAPI_LIBRARY = @"gssapi_krb5";
 

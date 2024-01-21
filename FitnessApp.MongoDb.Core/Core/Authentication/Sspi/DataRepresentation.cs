@@ -22,7 +22,7 @@ namespace MongoDB.Driver.Core.Authentication.Sspi
     /// See the TargetDataRep parameter at 
     /// http://msdn.microsoft.com/en-us/library/windows/desktop/aa375507(v=vs.85).aspx
     /// </remarks>
-    internal enum DataRepresentation
+    public enum DataRepresentation
     {
         /// <summary>
         /// SECURITY_NETWORK_DREP

@@ -17,7 +17,7 @@ using System;
 
 namespace MongoDB.Driver.Core.Compression
 {
-    internal static class CompressorTypeMapper
+    public static class CompressorTypeMapper
     {
         public static string ToServerName(CompressorType compressorType)
         {

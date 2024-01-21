@@ -35,7 +35,7 @@ namespace MongoDB.Driver.Core.Clusters
         private readonly string _replicaSetName;
 
         // constructor
-        internal SingleServerCluster(ClusterSettings settings, IClusterableServerFactory serverFactory, IEventSubscriber eventSubscriber, ILoggerFactory loggerFactory)
+        public SingleServerCluster(ClusterSettings settings, IClusterableServerFactory serverFactory, IEventSubscriber eventSubscriber, ILoggerFactory loggerFactory)
             : base(settings, serverFactory, eventSubscriber, loggerFactory)
         {
             Ensure.That(settings.SrvMaxHosts == 0, "srvMaxHosts cannot be used with a single server cluster.");

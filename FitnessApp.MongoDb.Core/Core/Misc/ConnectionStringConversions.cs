@@ -17,7 +17,7 @@ using System;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal static class ConnectionStringConversions
+    public static class ConnectionStringConversions
     {
         /// <summary>
         /// Compute the wait queue size.

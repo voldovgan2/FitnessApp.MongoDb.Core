@@ -86,7 +86,7 @@ namespace MongoDB.Driver.Core.Bindings
         public IServer PinnedServer
         {
             get => _pinnedServer;
-            internal set => _pinnedServer = value;
+            set => _pinnedServer = value;
         }
 
         /// <summary>
@@ -114,11 +114,10 @@ namespace MongoDB.Driver.Core.Bindings
         public BsonDocument RecoveryToken
         {
             get => _recoveryToken;
-            internal set => _recoveryToken = value;
+            set => _recoveryToken = value;
         }
 
-        // internal methods
-        internal void PinChannel(IChannelHandle channel)
+        public void PinChannel(IChannelHandle channel)
         {
             lock (_lock)
             {
@@ -127,7 +126,7 @@ namespace MongoDB.Driver.Core.Bindings
             }
         }
 
-        internal void SetState(CoreTransactionState state)
+        public void SetState(CoreTransactionState state)
         {
             _state = state;
             if (state == CoreTransactionState.InProgress)
@@ -136,7 +135,7 @@ namespace MongoDB.Driver.Core.Bindings
             }
         }
 
-        internal void UnpinAll()
+        public void UnpinAll()
         {
             lock (_lock)
             {

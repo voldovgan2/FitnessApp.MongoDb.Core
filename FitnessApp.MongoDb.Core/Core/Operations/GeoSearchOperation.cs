@@ -166,7 +166,7 @@ namespace MongoDB.Driver.Core.Operations
             }
         }
 
-        internal BsonDocument CreateCommand(ConnectionDescription connectionDescription, ICoreSession session)
+        public BsonDocument CreateCommand(ConnectionDescription connectionDescription, ICoreSession session)
         {
             var readConcern = ReadConcernHelper.GetReadConcernForCommand(session, connectionDescription, _readConcern);
             return new BsonDocument

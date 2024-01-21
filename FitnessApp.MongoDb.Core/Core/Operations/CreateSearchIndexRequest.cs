@@ -43,7 +43,7 @@ namespace MongoDB.Driver.Core.Operations
         }
 
         // methods
-        internal BsonDocument CreateIndexDocument() =>
+        public BsonDocument CreateIndexDocument() =>
             new()
             {
                 { "name", Name, Name != null },

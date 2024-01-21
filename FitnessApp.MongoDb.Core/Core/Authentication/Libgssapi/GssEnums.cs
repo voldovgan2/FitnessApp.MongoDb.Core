@@ -17,13 +17,13 @@ using System;
 
 namespace MongoDB.Driver.Core.Authentication.Libgssapi
 {
-    internal enum GssCode
+    public enum GssCode
     {
         GSS_C_GSS_CODE = 1,
         GSS_C_MECH_CODE = 2
     }
 
-    internal enum GssCredentialUsage
+    public enum GssCredentialUsage
     {
         GSS_C_BOTH = 0,
         GSS_C_INITIATE = 1,
@@ -31,13 +31,13 @@ namespace MongoDB.Driver.Core.Authentication.Libgssapi
     }
 
     [Flags]
-    internal enum GssFlags
+    public enum GssFlags
     {
         GSS_C_MUTUAL_FLAG = 2,
         GSS_C_SEQUENCE_FLAG = 8
     }
 
-    internal enum GssStatus : uint
+    public enum GssStatus : uint
     {
         GSS_S_COMPLETE = 0,
         GSS_S_CONTINUE_NEEDED = 1

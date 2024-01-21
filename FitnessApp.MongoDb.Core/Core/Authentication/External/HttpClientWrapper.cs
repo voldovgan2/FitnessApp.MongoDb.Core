@@ -37,7 +37,7 @@ namespace MongoDB.Driver.Core.Authentication.External
         public HttpClientWrapper() : this(CreateHttpClient())
         { }
 
-        internal HttpClientWrapper(HttpClient httpClient)
+        public HttpClientWrapper(HttpClient httpClient)
         {
             _httpClient = Ensure.IsNotNull(httpClient, nameof(httpClient));
         }

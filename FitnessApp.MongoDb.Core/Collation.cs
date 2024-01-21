@@ -167,9 +167,7 @@ namespace MongoDB.Driver
                 normalization,
                 backwards);
         }
-
-        // internal static methods
-        internal static CollationAlternate ToCollationAlternate(string value)
+        public static CollationAlternate ToCollationAlternate(string value)
         {
             switch (value)
             {
@@ -179,7 +177,7 @@ namespace MongoDB.Driver
             }
         }
 
-        internal static CollationCaseFirst ToCollationCaseFirst(string value)
+        public static CollationCaseFirst ToCollationCaseFirst(string value)
         {
             switch (value)
             {
@@ -190,7 +188,7 @@ namespace MongoDB.Driver
             }
         }
 
-        internal static CollationMaxVariable ToCollationMaxVariable(string value)
+        public static CollationMaxVariable ToCollationMaxVariable(string value)
         {
             switch (value)
             {
@@ -200,7 +198,7 @@ namespace MongoDB.Driver
             }
         }
 
-        internal static CollationStrength ToCollationStrength(int value)
+        public static CollationStrength ToCollationStrength(int value)
         {
             switch (value)
             {
@@ -213,7 +211,7 @@ namespace MongoDB.Driver
             }
         }
 
-        internal static int ToInt32(CollationStrength strength)
+        public static int ToInt32(CollationStrength strength)
         {
             switch (strength)
             {
@@ -226,7 +224,7 @@ namespace MongoDB.Driver
             }
         }
 
-        internal static string ToString(CollationAlternate alternate)
+        public static string ToString(CollationAlternate alternate)
         {
             switch (alternate)
             {
@@ -236,7 +234,7 @@ namespace MongoDB.Driver
             }
         }
 
-        internal static string ToString(CollationCaseFirst caseFirst)
+        public static string ToString(CollationCaseFirst caseFirst)
         {
             switch (caseFirst)
             {
@@ -247,7 +245,7 @@ namespace MongoDB.Driver
             }
         }
 
-        internal static string ToString(CollationMaxVariable maxVariable)
+        public static string ToString(CollationMaxVariable maxVariable)
         {
             switch (maxVariable)
             {

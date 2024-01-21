@@ -15,7 +15,7 @@
 
 namespace MongoDB.Driver
 {
-    internal enum ServerErrorCode
+    public enum ServerErrorCode
     {
         // this is not a complete list, more will be added as needed
         // see: https://github.com/mongodb/mongo/blob/master/src/mongo/base/error_codes.yml

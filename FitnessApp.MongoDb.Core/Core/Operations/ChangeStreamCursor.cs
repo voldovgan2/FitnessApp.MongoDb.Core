@@ -270,7 +270,7 @@ namespace MongoDB.Driver.Core.Operations
             return await _changeStreamOperation.ResumeAsync(_binding, cancellationToken).ConfigureAwait(false);
         }
 
-        internal struct ResumeValues
+        public struct ResumeValues
         {
             public BsonDocument ResumeAfter { get; set; }
             public BsonDocument StartAfter { get; set; }

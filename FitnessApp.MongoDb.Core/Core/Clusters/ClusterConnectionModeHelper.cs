@@ -17,7 +17,7 @@ using System;
 
 namespace MongoDB.Driver.Core.Clusters
 {
-    internal static class ClusterConnectionModeHelper
+    public static class ClusterConnectionModeHelper
     {
 #pragma warning disable CS0618 // Type or member is obsolete
         public static void EnsureConnectionModeValuesAreValid(ClusterConnectionMode connectionMode, ConnectionModeSwitch connectionModeSwitch, bool? directConnection)

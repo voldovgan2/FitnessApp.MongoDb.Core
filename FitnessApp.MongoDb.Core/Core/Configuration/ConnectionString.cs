@@ -121,7 +121,7 @@ namespace MongoDB.Driver.Core.Configuration
         {
         }
 
-        internal ConnectionString(string connectionString, bool isInternalRepresentation, IDnsResolver dnsResolver)
+        public ConnectionString(string connectionString, bool isInternalRepresentation, IDnsResolver dnsResolver)
         {
             _originalConnectionString = Ensure.IsNotNull(connectionString, nameof(connectionString));
             _isInternalRepresentation = isInternalRepresentation;
@@ -141,7 +141,7 @@ namespace MongoDB.Driver.Core.Configuration
         /// </summary>
         /// <param name="connectionString">The connection string.</param>
         /// <param name="isResolved">Whether the connection string is resolved.</param>
-        internal ConnectionString(string connectionString, bool isResolved)
+        public ConnectionString(string connectionString, bool isResolved)
             : this(connectionString, true, DnsClientWrapper.Instance)
         {
             if (!isResolved && _scheme != ConnectionStringScheme.MongoDBPlusSrv)
@@ -1195,7 +1195,7 @@ namespace MongoDB.Driver.Core.Configuration
             }
         }
 
-        internal static double ParseDouble(string name, string value)
+        public static double ParseDouble(string name, string value)
         {
             try
             {
@@ -1404,7 +1404,7 @@ namespace MongoDB.Driver.Core.Configuration
             }
         }
 
-        internal static bool HasValidParentDomain(string original, DnsEndPoint resolvedEndPoint)
+        public static bool HasValidParentDomain(string original, DnsEndPoint resolvedEndPoint)
         {
             // Helper functions...
             Func<string, string[]> getParentParts = x => x.Split('.').Skip(1).ToArray();

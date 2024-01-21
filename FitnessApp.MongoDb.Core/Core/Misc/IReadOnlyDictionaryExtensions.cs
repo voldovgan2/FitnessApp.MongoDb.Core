@@ -18,7 +18,7 @@ using System.Collections.Generic;
 
 namespace MongoDB.Driver.Core
 {
-    internal static class IReadOnlyDictionaryExtensions
+    public static class IReadOnlyDictionaryExtensions
     {
         public static bool IsEquivalentTo<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> x, IReadOnlyDictionary<TKey, TValue> y, Func<TValue, TValue, bool> equals)
         {

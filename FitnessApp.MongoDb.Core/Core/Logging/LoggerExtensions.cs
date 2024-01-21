@@ -21,7 +21,7 @@ using static MongoDB.Driver.Core.Logging.StructuredLogTemplateProviders;
 
 namespace MongoDB.Driver.Core.Logging
 {
-    internal static class LoggerExtensions
+    public static class LoggerExtensions
     {
         public static EventLogger<T> ToEventLogger<T>(this ILogger<T> logger, IEventSubscriber eventSubscriber)
             where T : LogCategories.EventCategory =>

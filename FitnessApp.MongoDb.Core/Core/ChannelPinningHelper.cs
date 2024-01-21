@@ -90,7 +90,7 @@ namespace MongoDB.Driver.Core
             return new ReadWriteBindingHandle(readWriteBinding);
         }
 
-        internal static IChannelSourceHandle CreateGetMoreChannelSource(IChannelSourceHandle channelSource, IChannelHandle channel, long cursorId)
+        public static IChannelSourceHandle CreateGetMoreChannelSource(IChannelSourceHandle channelSource, IChannelHandle channel, long cursorId)
         {
             IChannelSource effectiveChannelSource;
             if (IsInLoadBalancedMode(channelSource.ServerDescription) && cursorId != 0)
@@ -113,7 +113,7 @@ namespace MongoDB.Driver.Core
             return new ChannelSourceHandle(effectiveChannelSource);
         }
 
-        internal static void PinChannellIfRequired(
+        public static void PinChannellIfRequired(
             IChannelSourceHandle channelSource,
             IChannelHandle channel,
             ICoreSessionHandle session)

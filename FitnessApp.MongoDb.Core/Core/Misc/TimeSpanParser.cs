@@ -22,7 +22,7 @@ using System.Threading.Tasks;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal static class TimeSpanParser
+    public static class TimeSpanParser
     {
         // methods
         public static string ToString(TimeSpan value)

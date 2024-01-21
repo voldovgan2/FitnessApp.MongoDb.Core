@@ -19,7 +19,7 @@ using System.Linq;
 
 namespace MongoDB.Driver.Core.Encryption
 {
-    internal static class KmsProvidersEqualityHelper
+    public static class KmsProvidersEqualityHelper
     {
         public static bool Equals(IReadOnlyDictionary<string, IReadOnlyDictionary<string, object>> x, IReadOnlyDictionary<string, IReadOnlyDictionary<string, object>> y)
         {

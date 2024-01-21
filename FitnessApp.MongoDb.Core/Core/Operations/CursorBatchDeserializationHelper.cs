@@ -24,7 +24,7 @@ namespace MongoDB.Driver.Core.Operations
     /// <summary>
     /// A helper class for deserializing documents in a cursor batch.
     /// </summary>
-    internal static class CursorBatchDeserializationHelper
+    public static class CursorBatchDeserializationHelper
     {
         // public methods
         /// <summary>

@@ -21,7 +21,7 @@ using MongoDB.Driver.Core.Misc;
 
 namespace MongoDB.Driver.Core.Logging
 {
-    internal static class LogCategoryHelper
+    public static class LogCategoryHelper
     {
         private static readonly IDictionary<Type, string> __catergories = new ConcurrentDictionary<Type, string>();
 

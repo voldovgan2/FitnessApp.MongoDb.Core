@@ -63,7 +63,7 @@ namespace MongoDB.Driver.Core.Authentication
         {
         }
 
-        internal ScramSha1Authenticator(
+        public ScramSha1Authenticator(
             UsernamePasswordCredential credential,
             IRandomStringGenerator randomStringGenerator,
             ServerApi serverApi)

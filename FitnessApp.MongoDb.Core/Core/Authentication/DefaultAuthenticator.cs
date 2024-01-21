@@ -59,7 +59,7 @@ namespace MongoDB.Driver.Core.Authentication
         {
         }
 
-        internal DefaultAuthenticator(
+        public DefaultAuthenticator(
             UsernamePasswordCredential credential,
             IRandomStringGenerator randomStringGenerator,
             ServerApi serverApi)

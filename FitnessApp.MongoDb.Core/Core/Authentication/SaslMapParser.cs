@@ -26,7 +26,7 @@ namespace MongoDB.Driver.Core.Authentication
     /// value pairs separated by commas. Each attribute has a one-letter
     /// name."  
     /// </summary>
-    internal static class SaslMapParser
+    public static class SaslMapParser
     {
         private const int EOF = -1;
 

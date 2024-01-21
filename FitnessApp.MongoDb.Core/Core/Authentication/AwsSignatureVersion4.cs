@@ -27,7 +27,7 @@ namespace MongoDB.Driver.Core.Authentication
     /// <summary>
     /// The AWS signature version 4.
     /// </summary>
-    internal static class AwsSignatureVersion4
+    public static class AwsSignatureVersion4
     {
         /// <summary>
         /// Creates authorization request.

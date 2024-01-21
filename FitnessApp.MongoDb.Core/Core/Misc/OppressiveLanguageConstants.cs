@@ -15,7 +15,7 @@
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal static class OppressiveLanguageConstants
+    public static class OppressiveLanguageConstants
     {
         public const string LegacyHelloCommandName = "isMaster";
         public const string LegacyHelloCommandNameLowerCase = "ismaster";
