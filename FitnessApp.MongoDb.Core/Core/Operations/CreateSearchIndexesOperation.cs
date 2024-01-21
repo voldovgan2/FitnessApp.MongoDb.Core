@@ -29,7 +29,7 @@ namespace MongoDB.Driver.Core.Operations
     /// <summary>
     /// Represents a create search indexes operation.
     /// </summary>
-    internal sealed class CreateSearchIndexesOperation : IWriteOperation<BsonDocument>
+    public sealed class CreateSearchIndexesOperation : IWriteOperation<BsonDocument>
     {
         // fields
         private readonly CollectionNamespace _collectionNamespace;

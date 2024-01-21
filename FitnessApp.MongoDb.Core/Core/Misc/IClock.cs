@@ -17,7 +17,7 @@ using System;
 
 namespace MongoDB.Driver.Core.Misc
 {
-    internal interface IClock
+    public interface IClock
     {
         DateTime UtcNow { get; }
     }

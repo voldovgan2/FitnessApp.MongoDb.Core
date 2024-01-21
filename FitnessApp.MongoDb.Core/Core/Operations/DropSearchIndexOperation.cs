@@ -27,7 +27,7 @@ namespace MongoDB.Driver.Core.Operations
     /// <summary>
     /// Represents a drop index operation.
     /// </summary>
-    internal sealed class DropSearchIndexOperation : IWriteOperation<BsonDocument>
+    public sealed class DropSearchIndexOperation : IWriteOperation<BsonDocument>
     {
         // fields
         private readonly CollectionNamespace _collectionNamespace;

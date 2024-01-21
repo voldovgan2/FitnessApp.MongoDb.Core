@@ -27,7 +27,7 @@ namespace MongoDB.Driver.Core.Operations
     /// <summary>
     /// Represents an update search indexes operation.
     /// </summary>
-    internal sealed class UpdateSearchIndexOperation : IWriteOperation<BsonDocument>
+    public sealed class UpdateSearchIndexOperation : IWriteOperation<BsonDocument>
     {
         // fields
         private readonly CollectionNamespace _collectionNamespace;

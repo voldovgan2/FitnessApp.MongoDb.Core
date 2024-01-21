@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace MongoDB.Driver
 {
-    internal interface IMongoQueryableForwarder<T>
+    public interface IMongoQueryableForwarder<T>
     {
         Task<bool> AnyAsync(CancellationToken cancellationToken);
         Task<T> FirstAsync(CancellationToken cancellationToken);
