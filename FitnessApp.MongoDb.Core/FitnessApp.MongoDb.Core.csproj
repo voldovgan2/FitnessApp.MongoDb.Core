@@ -21,7 +21,7 @@
   <ItemGroup>
     <PackageReference Include="AWSSDK.SecurityToken" Version="3.7.300.39" />
     <PackageReference Include="DnsClient" Version="1.7.0" />
-    <PackageReference Include="FitnessApp.MongoDb.Bson" Version="1.0.0" />
+    <PackageReference Include="FitnessApp.MongoDb.Bson" Version="1.0.2" />
     <PackageReference Include="MongoDB.Libmongocrypt" Version="1.8.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
     <PackageReference Include="SharpCompress" Version="0.36.0" />
